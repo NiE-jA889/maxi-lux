@@ -1,0 +1,705 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAXI-LUX — Pogotowie Kanalizacyjne 24/7 | Warszawa i okolice</title>
+<meta name="description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:title" content="Maxi Lux - Usługi kanalizacyjne i hydrauliczne Warszawa i okolice">
+<meta property="og:description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: 'var(--color-ink)',
+          coal: 'var(--color-coal)',
+          steel: 'var(--color-steel)',
+          bone: 'var(--color-bone)',
+          mist: 'var(--color-mist)',
+          blue: 'var(--color-blue)',
+          blueSoft: 'var(--color-blue-soft)',
+          rust: 'var(--color-rust)',
+          glass: 'var(--color-glass)',
+          glassBorder: 'var(--color-glass-border)',
+        },
+        fontFamily: {
+          serif: ['"Instrument Serif"', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:var(--color-ink); color:var(--color-bone); font-family:Inter,system-ui,sans-serif; transition: background-color 0.4s ease, color 0.4s ease; }
+
+  :root {
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-steel: #1a2530;
+    --color-bone: #f5f2ec;
+    --color-mist: #e5e0d6;
+    --color-glass: rgba(0, 0, 0, 0.3);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --color-blue: #2563eb;
+    --color-blue-soft: #60a5fa;
+    --color-rust: #c94a15;
+  }
+  .light-theme {
+    --color-ink: #ffffff;
+    --color-coal: #f3f4f6;
+    --color-steel: #e5e7eb;
+    --color-bone: #111827;
+    --color-mist: #374151;
+    --color-glass: rgba(255, 255, 255, 0.6);
+    --color-glass-border: rgba(0, 0, 0, 0.25);
+  }
+
+  .serif { font-family:"Instrument Serif", serif; letter-spacing:-0.01em; }
+  .glow { box-shadow: 0 30px 80px -30px rgba(37,99,235,.55); }
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);background-size:3px 3px;mix-blend-mode:overlay;opacity:.35;}
+  .hero-grad{background:linear-gradient(180deg, rgba(11,15,20,.15) 0%, rgba(11,15,20,.6) 45%, rgba(11,15,20,.95) 100%);}
+  .tape{background:repeating-linear-gradient(45deg,#2563eb 0 18px,#0b0f14 18px 36px);}
+  .chip{border:1px solid rgba(245,242,236,.14); background:rgba(245,242,236,.03);}
+  .card-hover{transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s;}
+  .card-hover:hover{transform:translateY(-4px); border-color:rgba(37,99,235,.6);}
+  .btn-primary{background:#2563eb;color:#0b0f14;font-weight:600;transition:all .3s;}
+  .btn-primary:hover{background:#60a5fa;transform:translateY(-2px);box-shadow:0 20px 40px -10px rgba(37,99,235,.5);}
+  .divider{background:linear-gradient(90deg,transparent,rgba(245,242,236,.2),transparent);height:1px;}
+  .pulse-dot{animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+  .marquee{animation:marquee 40s linear infinite;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Lepsza widoczność w jasnym motywie */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.3 !important; /* ciemniejsze paski w tle */
+  }
+  .light-theme footer img[src*="logo.png"] {
+    /* odwracamy kolory loga z białego na czarne z użyciem inwersji i obrotu odcieni, by niebieski został niebieskim! */
+    filter: invert(1) hue-rotate(180deg) brightness(0.8) drop-shadow(0 4px 6px rgba(0,0,0,0.1)) !important;
+  }
+
+
+  /* Hero Text Color Fix in Light Mode */
+  .light-theme .hero-content-wrapper {
+    --color-bone: #f5f2ec;
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-mist: #e5e0d6;
+  }
+  
+  /* Strongly visible cards and lines in Light Mode */
+  .light-theme .border-glassBorder {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+  }
+  .light-theme .bg-glass {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  }
+  /* Bolder background stripes */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.5 !important;
+  }
+  
+
+  /* Fix chip colors in light theme */
+  .light-theme .chip { 
+    border-color: rgba(0,0,0,0.15) !important; 
+    background: rgba(0,0,0,0.03) !important; 
+    color: #111827 !important; 
+  }
+  .light-theme .bg-glass {
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.12), 0 0 20px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+  .light-theme header, .light-theme .emergency-bar {
+    --color-ink: #0b0f14 !important;
+    --color-coal: #111820 !important;
+    --color-steel: #1a2530 !important;
+    --color-bone: #f5f2ec !important;
+    --color-mist: #e5e0d6 !important;
+    --color-glass: rgba(0, 0, 0, 0.3) !important;
+    --color-glass-border: rgba(255, 255, 255, 0.2) !important;
+  }
+  /* Force dark mode background on header explicitly just in case */
+  .light-theme header { background-color: rgba(11, 15, 20, 0.95) !important; border-bottom-color: rgba(255,255,255,0.1) !important; }
+  .light-theme header a, .light-theme header button { color: #f5f2ec !important; }
+  .light-theme header .text-bone\/60 { color: rgba(245, 242, 236, 0.6) !important; }
+  .light-theme header .bg-glass { background-color: rgba(0,0,0,0.3) !important; border-color: rgba(255,255,255,0.2) !important; }
+  .light-theme header svg { stroke: #f5f2ec !important; }
+  .light-theme .emergency-bar-text { color: #f5f2ec !important; }
+
+  /* Dropdowns and mobile menus inside header MUST have a solid dark background in light theme so white text is readable */
+  .light-theme header .bg-glass, .light-theme header #mobile-services-menu, .light-theme .header-dropdown-fix {
+    background-color: #111827 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* Make chip backgrounds slightly darker in light theme so text is more visible */
+  .light-theme .chip {
+    background: rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+  }
+
+  /* Ensure the shadow around bg-glass (cards, pages) is extremely noticeable in light mode */
+  .light-theme .bg-glass {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+  }
+</style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased bg-ink text-bone"><div class="fixed inset-0 z-0 pointer-events-none overflow-hidden aesthetic-stripes" aria-hidden="true">
+  <div class="absolute origin-center" style="top: 42%; left: -2%; width: 140vw; height: 1px; transform: rotate(-31deg); opacity: 0.1; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: -9%; left: 1%; width: 140vw; height: 1px; transform: rotate(-17deg); opacity: 0.14; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 29%; left: 11%; width: 140vw; height: 4px; transform: rotate(31deg); opacity: 0.12; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 97%; left: -19%; width: 140vw; height: 3px; transform: rotate(37deg); opacity: 0.18; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 75%; left: -8%; width: 140vw; height: 2px; transform: rotate(52deg); opacity: 0.2; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 6%; left: 13%; width: 140vw; height: 2px; transform: rotate(-26deg); opacity: 0.2; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 40%; left: 17%; width: 140vw; height: 4px; transform: rotate(-13deg); opacity: 0.11; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 33%; left: 11%; width: 140vw; height: 2px; transform: rotate(21deg); opacity: 0.17; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 99%; left: 4%; width: 140vw; height: 4px; transform: rotate(20deg); opacity: 0.05; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 98%; left: -5%; width: 140vw; height: 2px; transform: rotate(3deg); opacity: 0.13; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+</div>
+
+<!-- Emergency bar -->
+<div class="tape h-2"></div>
+<div style="background-color: #0b0f14 !important;" class="border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-widest" style="color: #f5f2ec !important;">
+    <div class="flex items-center gap-2" style="color: rgba(245, 242, 236, 0.7) !important;"><span class="pulse-dot w-2 h-2 rounded-full bg-blue"></span> Pogotowie 24/7 · Dojazd nawet w 45 min</div>
+    <a href="tel:+48513412313" class="text-blue font-semibold hover:text-blueSoft">☎ Zadzwoń teraz</a>
+  </div>
+</div>
+
+<!-- Nav -->
+
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-md border-b border-glassBorder shadow-2xl transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-1 flex items-center justify-between">
+    
+      <a href="../index.html" class="flex items-center justify-center overflow-hidden w-40 md:w-56 h-12 md:h-16 relative">
+        <img src="../logo/logo.png" alt="Maxi-Lux Logo" class="absolute w-[200%] h-[200%] object-contain drop-shadow-2xl scale-[1.3] md:scale-[1.5]">
+      </a>
+      
+    
+    
+      <!-- Theme Switcher -->
+      <div class="flex flex-col items-center justify-center mr-6">
+        <div class="flex items-center gap-2 bg-coal/50 backdrop-blur-md rounded-full px-2 py-1 border border-glassBorder mb-1">
+          <button id="theme-dark-btn" onclick="setTheme('dark')" class="w-6 h-6 rounded-full bg-blue hover:scale-110 transition-transform shadow-[0_0_10px_rgba(37,99,235,0.5)] border-2 border-white" aria-label="Dark theme"></button>
+          <button id="theme-light-btn" onclick="setTheme('light')" class="w-6 h-6 rounded-full bg-white hover:scale-110 transition-transform border border-mist shadow-sm" aria-label="Light theme"></button>
+        </div>
+        <span class="text-[9px] uppercase tracking-wider text-mist">Zmień motyw</span>
+      </div>
+<nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-bone/90">
+      
+      <a href="../index.html" class="hover:text-blue transition-colors">Home</a>
+      <a href="../o-nas.html" class="hover:text-blue transition-colors">O nas</a>
+      
+      <!-- Dropdown -->
+      <div class="relative group py-4">
+        <button class="flex items-center gap-1 hover:text-blue transition-colors focus:outline-none">
+          Usługi 
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <!-- The dropdown menu -->
+        <div class="absolute top-full left-0 mt-0 w-80 border border-glassBorder rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden z-50 bg-glass backdrop-blur-md">
+          <div class="py-2 flex flex-col text-xs">
+            <a href="udraznianie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Przepychanie rur</a>
+            <a href="wuko.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue transition-colors">Transport ADR</a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="../wywoz-odpadow.html" class="hover:text-blue transition-colors">Wywóz odpadów</a>
+      <a href="../galeria.html" class="hover:text-blue transition-colors">Galeria</a>
+      <a href="../dokumenty.html" class="hover:text-blue transition-colors">Dokumenty</a>
+      <a href="../kontakt.html" class="hover:text-blue transition-colors">Kontakt</a>
+      <a href="../praca.html" class="hover:text-blue transition-colors">Praca</a>
+      
+      <button class="hover:text-blue transition-colors ml-2" aria-label="Szukaj">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </button>
+    
+    </nav>
+    
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-blueSoft transition-colors shadow-lg shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="mobile-menu-btn" onclick="event.preventDefault(); const m = document.getElementById('mobile-menu'); if(m.style.display === 'block') { m.style.display = 'none'; } else { m.style.display = 'block'; }" class="lg:hidden text-bone focus:outline-none p-2 hover:text-blue transition-colors">
+      <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display: none;" class="lg:hidden bg-coal border-t border-glassBorder absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto shadow-2xl w-full">
+    <div class="px-6 py-4 flex flex-col font-medium text-bone/90">
+      
+      <a href="../index.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Home</a>
+      <a href="../o-nas.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">O nas</a>
+      
+      <!-- Dropdown -->
+      
+          
+        <div class="border-b border-white/5">
+          <button id="mobile-services-btn" onclick="event.preventDefault(); const m = this.nextElementSibling; if(m.classList.contains('hidden')){ m.classList.remove('hidden'); m.style.display='flex'; this.querySelector('svg').style.transform='rotate(180deg)'; } else { m.classList.add('hidden'); m.style.display='none'; this.querySelector('svg').style.transform='rotate(0deg)'; }" class="w-full text-left px-2 py-3 hover:text-blue flex items-center justify-between font-medium">
+            Usługi
+            <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="mobile-services-menu" class="hidden flex-col pl-4 text-sm bg-black/20 pb-2">
+            
+            <a href="udraznianie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Przepychanie rur</a>
+            <a href="wuko.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Transport ADR</a>
+          
+      
+          </div>
+        </div>
+      
+      
+      <a href="../wywoz-odpadow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Wywóz odpadów</a>
+      <a href="../galeria.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Galeria</a>
+      <a href="../dokumenty.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Dokumenty</a>
+      <a href="../kontakt.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Kontakt</a>
+      <a href="../praca.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Praca</a>
+      
+      
+    
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-4 rounded-full text-center mt-6 font-bold shadow-xl shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+  </div>
+</header>
+  
+
+<!-- Hero -->
+<section class="py-24 relative min-h-[70vh] overflow-hidden z-10">
+
+
+  <div class="max-w-[1000px] mx-auto px-6 relative z-10">
+    <div class="rounded-[2rem] border border-glassBorder p-10 md:p-16 overflow-hidden bg-glass backdrop-blur-md"><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 border-glassBorder mb-12 pb-12 border-b"><div class="col-span-full mb-2" data-aos="fade-up"><h3 class="serif text-3xl text-blue">Galeria z realizacji</h3></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="0"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="1"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="2"></div></div>
+      
+
+	<div id="av-layout-grid-1" class="av-layout-grid-container av-feam1-0fb216fe8a83d60d07c2ad5924d0afe4 entry-content-wrapper main_color av-flex-cells  avia-builder-el-0  el_before_av_layout_row  avia-builder-el-first   container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-2ce3d8b3824efca04ead95739d028d32 av-gridrow-cell av_one_half no_margin  avia-builder-el-1  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div><div class="flex_cell av-k05683dy-8c290908cff07dde75e3b429a477c62a av-gridrow-cell av_one_half no_margin  avia-builder-el-2  el_after_av_cell_one_half  avia-builder-el-last  content-align-top"><div class="flex_cell_inner">
+<div class="av-special-heading av-ml417n30-cd5989b75a388056998d972f0ddf3ffb av-special-heading-h1 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-3  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h1 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-4xl md:text-5xl border-b border-glassBorder pb-4" itemprop="headline" data-aos="fade-up"><strong>Przewóz materiałów niebezpiecznych – transport ADR</strong></h1><div class="av_custom_color av-subheading av-subheading_below"><p class="text-bone/80 mb-4 leading-relaxed">Bezpieczeństwo, terminowość i pełna zgodność z przepisami prawa.</p>
+</div><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-5a488f55885c63194cfb4aa7ecfb0891  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Transport ADR <a href="tel:513412313" class="text-blue hover:text-blueSoft underline transition-colors">513 412 313</a></h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Przewóz materiałów niebezpiecznych ADR</strong> to specjalistyczna forma transportu drogowego. Obejmuje substancje, które mogą stanowić zagrożenie dla ludzi, mienia lub środowiska. Dotyczy to między innymi odpadów ciekłych, substancji chemicznych, osadów, ścieków oraz materiałów łatwopalnych lub toksycznych. Każdy taki transport musi być realizowany według ściśle określonych zasad.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Podstawą jest <strong>umowa ADR</strong>, która reguluje sposób przewozu, oznakowanie pojazdów oraz wymagania wobec kierowców. Dokument ten określa także procedury bezpieczeństwa obowiązujące na każdym etapie transportu. Znaczenie ma zarówno załadunek, jak i sam przejazd oraz rozładunek. Błędy na którymkolwiek etapie mogą prowadzić do poważnych konsekwencji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Transport ADR</strong> wymaga odpowiedniego przygotowania technicznego. Pojazdy muszą być przystosowane do przewozu określonych substancji. Konieczne jest także stosowanie właściwych zabezpieczeń oraz systemów zapobiegających wyciekom. Duże znaczenie ma również prawidłowe oznakowanie pojazdu oraz ładunku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Profesjonalny transport ADR to także pełna kontrola nad dokumentacją. Każdy przewóz musi być odpowiednio opisany i zgłoszony. Wymagane są karty charakterystyki oraz dokumenty przewozowe. Ich poprawność ma kluczowe znaczenie podczas kontroli drogowych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux realizuje transport materiałów niebezpiecznych zgodnie z obowiązującymi przepisami ADR. Usługa jest kierowana do klientów, którzy oczekują bezpieczeństwa, terminowości oraz pełnej zgodności z prawem. Dzięki doświadczeniu oraz odpowiedniemu zapleczu technicznemu możliwa jest obsługa nawet najbardziej wymagających zleceń.</p>
+<p style="text-align: left;" class="text-bone/80 mb-4 leading-relaxed">
+</p></div></section>
+</div></div></div><div id="av-layout-grid-2" class="av-layout-grid-container av-8vmb5-c15c23ee56ac8a18548e7a1d98e12113 entry-content-wrapper main_color av-flex-cells  avia-builder-el-5  el_after_av_layout_row  el_before_av_layout_row  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-7-0cd2f05468a4ea6294287adc4e48dba6 av-gridrow-cell av_one_half no_margin  avia-builder-el-6  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+<div class="av-special-heading av-ml41lwtf-4dc28c8dace8e07c57043986a5754abd av-special-heading-h2 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-7  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h2 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-3xl" itemprop="headline" data-aos="fade-up"><strong>Dlaczego warto wybrać transport ADR realizowany przez firmę Maxi-Lux</strong></h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-5-b483594ef4fb1092d6e2e5f99eb5dc90  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><p class="text-bone/80 mb-4 leading-relaxed">Wybór sprawdzonego partnera ma kluczowe znaczenie przy organizacji przewozu materiałów niebezpiecznych. Firma Maxi-Lux łączy doświadczenie z profesjonalnym podejściem do każdego zlecenia. Transport ADR realizowany jest z zachowaniem obowiązujących przepisów oraz wysokich standardów bezpieczeństwa. Klienci mogą liczyć na rzetelną obsługę i pełną kontrolę nad przebiegiem przewozu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Przewóz ADR powierzony firmie Maxi-Lux to oszczędność czasu i ograniczenie ryzyka. Zespół przejmuje odpowiedzialność za organizację transportu oraz kwestie formalne. Elastyczne podejście pozwala dopasować usługę do potrzeb różnych branż. To rozwiązanie dla firm, które oczekują bezpiecznego i sprawnego transportu materiałów niebezpiecznych. Zadzwoń, odpowiemy na wszystkie pytania!</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><a href="https://maxi-lux.pl/kontakt/" class="text-blue hover:text-blueSoft underline transition-colors">Kontakt &gt;&gt;</a></p>
+</div></section>
+</div></div><div class="flex_cell av-k05683dy-6-cce1472ac6371202d2542db2f0da3629 av-gridrow-cell av_one_half no_margin  avia-builder-el-9  el_after_av_cell_one_half  avia-builder-el-last  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div></div><div id="av-layout-grid-3" class="av-layout-grid-container av-8vmb5-4-cd1c16f7d74b4d6d1ec4cde05e085865 entry-content-wrapper main_color av-flex-cells  avia-builder-el-10  el_after_av_layout_row  avia-builder-el-last  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-3-92f5044e363d1a8c53997f0fb44e587a av-gridrow-cell av_one_full no_margin  avia-builder-el-11  avia-builder-el-no-sibling  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+<section class="av_textblock_section av-k03sgxkz-2-7877495ac85a5b06898e374ee30c1f76  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Czym jest umowa ADR i jakie reguluje zasady transportu?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Umowa ADR</strong> to międzynarodowe porozumienie dotyczące drogowego przewozu materiałów niebezpiecznych. Dokument ten precyzyjnie określa, w jaki sposób powinien być realizowany transport substancji stwarzających zagrożenie. Przepisy ADR obowiązują na terenie większości krajów Europy, w tym również w Polsce.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Regulacje ADR obejmują szeroki zakres zagadnień. Dotyczą klasyfikacji materiałów niebezpiecznych, ich pakowania oraz oznakowania. Określają także wymagania wobec pojazdów i kierowców. Ważną częścią przepisów są procedury postępowania w sytuacjach awaryjnych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Materiały objęte ADR zostały podzielone na klasy zagrożeń. Każda z nich ma przypisane konkretne oznaczenia oraz zasady przewozu. Dzięki temu możliwe jest szybkie rozpoznanie rodzaju substancji oraz potencjalnego ryzyka. Ma to kluczowe znaczenie dla bezpieczeństwa na drodze oraz podczas załadunku i rozładunku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Umowa ADR reguluje również kwestie dokumentacji przewozowej. Każdy transport musi posiadać komplet wymaganych dokumentów. Należą do nich między innymi dokument przewozowy ADR oraz instrukcje pisemne dla kierowcy. Brak lub błędy w dokumentacji mogą skutkować poważnymi konsekwencjami prawnymi.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotnym elementem ADR są wymagania techniczne dotyczące pojazdów. Środki transportu muszą być odpowiednio przystosowane do przewozu konkretnych materiałów. Przepisy określają także obowiązkowe wyposażenie awaryjne. Wszystko po to, aby zminimalizować ryzyko wycieku lub skażenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux realizuje transport ADR zgodnie z aktualnymi przepisami umowy. Każde zlecenie jest planowane z uwzględnieniem rodzaju przewożonej substancji oraz obowiązujących norm. Dzięki temu klienci mają pewność, że przewóz odbywa się w sposób bezpieczny i zgodny z prawem.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Jakie substancje i odpady podlegają transportowi ADR</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport materiałów niebezpiecznych obejmuje bardzo szeroką grupę substancji. Nie są to wyłącznie chemikalia kojarzone z przemysłem. Przepisy regulują również przewóz wielu materiałów spotykanych w codziennej działalności firm usługowych, budowlanych i produkcyjnych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Do tej kategorii zaliczane są między innymi ciecze łatwopalne oraz substancje żrące. Obejmują one paliwa, rozpuszczalniki, oleje techniczne oraz różnego rodzaju preparaty chemiczne. Szczególne zasady obowiązują także przy przewozie substancji toksycznych i drażniących, które mogą stanowić zagrożenie dla zdrowia ludzi.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Transportowi podlegają również odpady niebezpieczne. Mogą to być odpady płynne, osady technologiczne, pozostałości po procesach przemysłowych oraz mieszaniny zawierające związki chemiczne. Wiele z nich wymaga specjalnych zbiorników oraz odpowiednich zabezpieczeń podczas przewozu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Oddzielną grupę stanowią materiały stwarzające zagrożenie dla środowiska. Zaliczają się do nich substancje, które w przypadku wycieku mogą powodować skażenie gleby lub wód. Ich przewóz musi być zaplanowany w sposób minimalizujący ryzyko awarii oraz skutków ewentualnego rozlania.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Przepisy obejmują także gazy sprężone oraz substancje pod ciśnieniem. Dotyczy to zarówno gazów palnych, jak i technicznych. Wymagają one szczególnej ostrożności ze względu na możliwość gwałtownego uwolnienia energii.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux realizuje przewozy różnych grup materiałów niebezpiecznych. Każde zlecenie jest analizowane indywidualnie. Dobierane są odpowiednie pojazdy oraz zabezpieczenia. Dzięki temu możliwy jest bezpieczny transport nawet najbardziej wymagających ładunków.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><noscript><img decoding="async" class="aligncenter wp-image-3261 size-full" src="https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych.webp" alt="przewóz materiałów niebezpiecznych" width="1296" height="728" srcset="https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych.webp 1296w, https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych-300x169.webp 300w, https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych-1030x579.webp 1030w, https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych-768x431.webp 768w, https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych-705x396.webp 705w" sizes="(max-width: 1296px) 100vw, 1296px" /></noscript></p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Transport materiałów niebezpiecznych w różnych sektorach gospodarki</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Przewóz materiałów niebezpiecznych ma zastosowanie w wielu gałęziach gospodarki. Usługa ta jest niezbędna tam, gdzie wykorzystywane są substancje wymagające szczególnej ostrożności. Dotyczy to zarówno dużych zakładów przemysłowych, jak i mniejszych firm usługowych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">W przemyśle transport obejmuje między innymi surowce chemiczne, półprodukty oraz odpady poprocesowe. Każdy z tych ładunków wymaga indywidualnego podejścia. Znaczenie ma skład substancji, jej właściwości oraz sposób magazynowania. Odpowiednie zaplanowanie przewozu ogranicza ryzyko awarii i przestojów produkcyjnych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Sektor budowlany również korzysta z tego rodzaju transportu. Dotyczy to przewozu paliw, środków chemicznych oraz materiałów technicznych wykorzystywanych na placach budowy. W takich przypadkach ważna jest terminowość oraz możliwość dojazdu w trudnych warunkach terenowych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firmy serwisowe i komunalne zlecają transport substancji płynnych oraz odpadów wymagających specjalnego zabezpieczenia. Często są to ładunki, które nie mogą być przewożone standardowymi pojazdami. Wymagają one odpowiednich zbiorników oraz zachowania procedur bezpieczeństwa.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Znaczącą rolę odgrywa także transport materiałów niebezpiecznych dla branży logistycznej i magazynowej. Przewóz pomiędzy punktami składowania musi odbywać się w sposób kontrolowany. Każdy etap trasy ma wpływ na bezpieczeństwo ładunku oraz otoczenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux realizuje transport materiałów niebezpiecznych dla różnych sektorów gospodarki. Każde zlecenie jest dopasowywane do specyfiki branży oraz rodzaju ładunku. Dzięki temu klienci otrzymują usługę bezpieczną, elastyczną i zgodną z obowiązującymi przepisami.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Bezpieczeństwo podczas przewozu materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Bezpieczeństwo stanowi podstawę transportu materiałów niebezpiecznych. Każdy etap przewozu musi być zaplanowany z dużą dokładnością. Dotyczy to przygotowania ładunku, wyboru pojazdu oraz trasy przejazdu. Nawet drobne zaniedbania mogą prowadzić do poważnych zagrożeń.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Kluczowe znaczenie ma właściwe zabezpieczenie przewożonych substancji. Materiały muszą być umieszczone w odpowiednich pojemnikach lub zbiornikach. Chronią one przed wyciekiem oraz niekontrolowanym uwolnieniem zawartości. Istotne jest także prawidłowe rozmieszczenie ładunku, które wpływa na stabilność pojazdu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Równie ważne są procedury obowiązujące podczas załadunku i rozładunku. Czynności te wymagają zachowania szczególnej ostrożności. Personel musi znać właściwości przewożonych substancji oraz sposoby reagowania w sytuacjach awaryjnych. Stosowanie odpowiednich środków ochrony osobistej jest w takich przypadkach standardem.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Bezpieczeństwo transportu zależy również od stanu technicznego pojazdów. Regularne przeglądy oraz bieżąca kontrola wyposażenia minimalizują ryzyko usterek. Pojazdy wykorzystywane do przewozu materiałów niebezpiecznych muszą być wyposażone w elementy umożliwiające szybkie reagowanie w razie awarii.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotnym elementem jest także planowanie trasy przejazdu. Unika się miejsc o dużym natężeniu ruchu oraz obszarów szczególnie wrażliwych. Pozwala to ograniczyć skutki ewentualnych zdarzeń drogowych oraz zwiększyć bezpieczeństwo osób trzecich.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux przykłada dużą wagę do zasad bezpieczeństwa. Każdy przewóz realizowany jest zgodnie z obowiązującymi procedurami. Doświadczenie zespołu oraz odpowiednie zaplecze techniczne pozwalają skutecznie ograniczać ryzyko na każdym etapie transportu.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Wymagania prawne dla firm realizujących transport materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Realizacja transportu materiałów niebezpiecznych wiąże się z koniecznością spełnienia określonych wymagań prawnych. Przepisy jasno wskazują, jakie warunki musi spełniać firma świadcząca tego typu usługi. Celem regulacji jest zapewnienie bezpieczeństwa ludzi oraz ochrona środowiska.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Podstawowym obowiązkiem przedsiębiorstwa jest dostosowanie działalności do aktualnych przepisów transportowych. Dotyczy to zarówno organizacji przewozu, jak i prowadzenia odpowiedniej dokumentacji. Każde zlecenie musi być realizowane w oparciu o jasno określone procedury.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotną rolę odgrywają także wymagania dotyczące floty. Pojazdy muszą spełniać normy techniczne przewidziane dla przewozu substancji stwarzających zagrożenie. Obejmuje to stan techniczny, wyposażenie oraz regularne przeglądy. Brak spełnienia tych warunków wyklucza możliwość legalnego wykonywania usługi.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firmy realizujące transport muszą również posiadać odpowiednie uprawnienia oraz szkolenia personelu. Dotyczy to nie tylko kierowców, ale także osób odpowiedzialnych za organizację przewozu. Znajomość przepisów oraz procedur awaryjnych jest obowiązkowa.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Ważnym aspektem są kontrole przeprowadzane przez uprawnione organy. Sprawdzana jest dokumentacja, stan pojazdów oraz sposób realizacji przewozu. Niedopełnienie obowiązków może skutkować karami finansowymi oraz wstrzymaniem działalności.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux działa zgodnie z obowiązującymi przepisami prawa. Każdy transport jest realizowany w sposób legalny i odpowiedzialny. Klienci zyskują pewność, że przewóz powierzonych substancji odbywa się zgodnie z aktualnymi wymaganiami formalnymi.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Pojazdy przystosowane do transportu materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Pojazdy wykorzystywane do transportu materiałów niebezpiecznych muszą spełniać ściśle określone wymagania techniczne. Nie mogą to być standardowe środki transportu. Każdy pojazd jest dobierany pod kątem rodzaju przewożonej substancji oraz jej właściwości fizycznych i chemicznych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotną rolę odgrywa konstrukcja pojazdu. W przypadku przewozu substancji płynnych stosowane są specjalistyczne cysterny i zbiorniki. Muszą one być odporne na działanie przewożonych materiałów oraz zabezpieczone przed rozszczelnieniem. Ważna jest także szczelność połączeń i zaworów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Pojazdy przystosowane do takiego transportu wyposażone są w dodatkowe systemy bezpieczeństwa. Obejmują one między innymi zabezpieczenia przeciwwybuchowe oraz elementy ograniczające ryzyko wycieku. Każdy detal ma znaczenie dla bezpieczeństwa przewozu oraz otoczenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Duże znaczenie ma także regularna kontrola stanu technicznego floty. Przeglądy wykonywane są częściej niż w przypadku zwykłych pojazdów. Pozwala to wykryć ewentualne usterki na wczesnym etapie i zapobiec awariom w trakcie realizacji zlecenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Ważnym elementem jest również odpowiednie wyposażenie pojazdu. Musi ono umożliwiać szybką reakcję w sytuacjach awaryjnych. Sprzęt ten jest dostosowany do rodzaju przewożonego ładunku i obowiązujących przepisów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux dysponuje pojazdami przystosowanymi do przewozu materiałów niebezpiecznych. Flota jest systematycznie serwisowana i przygotowana do realizacji wymagających zleceń. Dzięki temu możliwy jest bezpieczny i sprawny transport różnego rodzaju substancji.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Wyposażenie i oznakowanie pojazdów do przewozu materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Prawidłowe wyposażenie pojazdów ma kluczowe znaczenie dla bezpiecznego przewozu materiałów niebezpiecznych. Każdy środek transportu musi być przygotowany na różne sytuacje, które mogą wystąpić w trakcie realizacji zlecenia. Dotyczy to zarówno standardowych elementów technicznych, jak i dodatkowego sprzętu zabezpieczającego.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Obowiązkowym elementem są środki umożliwiające szybką reakcję w przypadku awarii. W skład wyposażenia wchodzą między innymi gaśnice, kliny pod koła oraz sorbenty do neutralizacji wycieków. Ich obecność pozwala ograniczyć skutki ewentualnego zagrożenia i zwiększa bezpieczeństwo osób znajdujących się w pobliżu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotną rolę odgrywa także odpowiednie oznakowanie pojazdów. Dzięki niemu służby oraz inni uczestnicy ruchu mogą szybko rozpoznać charakter przewożonego ładunku. Tablice ostrzegawcze oraz symbole informacyjne są dobierane zgodnie z rodzajem substancji i poziomem zagrożenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Oznakowanie musi być czytelne i trwałe. Nie może ulec zatarciu ani uszkodzeniu podczas transportu. Jego poprawność ma znaczenie podczas kontroli drogowych oraz w sytuacjach awaryjnych. Pozwala to na szybkie podjęcie właściwych działań.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Ważnym elementem wyposażenia są także instrukcje bezpieczeństwa. Muszą znajdować się w pojeździe i być dostępne dla kierowcy. Zawierają one informacje o sposobach postępowania w razie wypadku lub wycieku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux dba o kompletne wyposażenie oraz prawidłowe oznakowanie swojej floty. Każdy pojazd jest przygotowany zgodnie z obowiązującymi wymaganiami. Dzięki temu transport realizowany jest w sposób bezpieczny i zgodny z przepisami.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><noscript><img decoding="async" class="size-full wp-image-3262 aligncenter" src="https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr.webp" alt="oznakowanie pojazdów ADR" width="1200" height="800" srcset="https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr.webp 1200w, https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr-300x200.webp 300w, https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr-1030x687.webp 1030w, https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr-768x512.webp 768w, https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr-705x470.webp 705w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Kwalifikacje kierowców realizujących przewóz materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Kierowcy realizujący przewóz materiałów niebezpiecznych muszą posiadać odpowiednie kwalifikacje. Sama umiejętność prowadzenia pojazdu nie jest w tym przypadku wystarczająca. Niezbędna jest wiedza dotycząca właściwości przewożonych substancji oraz zasad bezpiecznego transportu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Podstawą są specjalistyczne szkolenia, które przygotowują kierowców do pracy z ładunkami stwarzającymi zagrożenie. Podczas kursów omawiane są procedury bezpieczeństwa oraz sposoby reagowania w sytuacjach awaryjnych. Duży nacisk kładzie się na praktyczne aspekty codziennej pracy.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Kierowcy muszą znać obowiązujące przepisy oraz wymagania formalne związane z przewozem. Dotyczy to między innymi dokumentacji przewozowej i zasad oznakowania pojazdów. Znajomość tych kwestii pozwala uniknąć błędów podczas kontroli drogowych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotnym elementem jest także doświadczenie zawodowe. Przewóz materiałów niebezpiecznych wymaga opanowania i odpowiedzialności. Umiejętność przewidywania zagrożeń oraz spokojnego reagowania w trudnych sytuacjach ma ogromne znaczenie dla bezpieczeństwa.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Regularne szkolenia uzupełniające są równie ważne. Przepisy oraz procedury mogą ulegać zmianom. Kierowcy muszą być na bieżąco z aktualnymi wymaganiami, aby wykonywać swoją pracę zgodnie z obowiązującymi normami.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux współpracuje z wykwalifikowanymi kierowcami, którzy posiadają niezbędne uprawnienia i doświadczenie. Dzięki temu każdy transport realizowany jest przez osoby świadome odpowiedzialności, jaka wiąże się z przewozem materiałów niebezpiecznych.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Procedury załadunku i rozładunku materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Załadunek i rozładunek materiałów niebezpiecznych to jedne z najważniejszych etapów całego procesu transportowego. Właśnie w tych momentach ryzyko wystąpienia zagrożeń jest największe. Dlatego każda czynność musi być przeprowadzona zgodnie z określonymi procedurami.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Przed rozpoczęciem załadunku sprawdzany jest stan techniczny pojemników lub zbiorników. Ważne jest także potwierdzenie zgodności ładunku z dokumentacją. Każda nieprawidłowość może wpłynąć na bezpieczeństwo przewozu. Kontrola obejmuje również szczelność oraz sposób zabezpieczenia materiałów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Sam załadunek odbywa się z zachowaniem zasad ostrożności. Stosowane są odpowiednie narzędzia oraz środki ochrony osobistej. Osoby uczestniczące w tym procesie muszą znać właściwości przewożonych substancji. Pozwala to uniknąć niebezpiecznych sytuacji oraz uszkodzeń sprzętu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Rozładunek również wymaga precyzji i doświadczenia. Materiały muszą być przekazywane w sposób kontrolowany, bez ryzyka rozlania lub uwolnienia niebezpiecznych oparów. Duże znaczenie ma odpowiednie przygotowanie miejsca rozładunku oraz zachowanie porządku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">W trakcie tych czynności obowiązują jasno określone zasady bezpieczeństwa. Obejmują one między innymi zakaz używania otwartego ognia oraz konieczność zabezpieczenia strefy pracy. Każda procedura ma na celu ochronę ludzi oraz środowiska.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Transport ADR a ochrona środowiska naturalnego</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR odgrywa ważną rolę w ochronie środowiska naturalnego. Przewóz materiałów niebezpiecznych musi być realizowany w sposób, który ogranicza ryzyko skażenia gleby, wód oraz powietrza. Właściwa organizacja transportu ma bezpośredni wpływ na bezpieczeństwo otoczenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Podczas przewozu ADR stosowane są rozwiązania, które minimalizują możliwość wycieku substancji. Odpowiednie zbiorniki, szczelne pojemniki oraz kontrola stanu technicznego pojazdów pozwalają ograniczyć negatywne skutki dla środowiska. Każdy etap transportu jest planowany z uwzględnieniem potencjalnych zagrożeń.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Przewóz materiałów niebezpiecznych wymaga także przestrzegania zasad związanych z gospodarką odpadami. Substancje muszą trafiać do miejsc przeznaczonych do ich dalszego przetwarzania lub neutralizacji. Prawidłowo zrealizowany przewóz ADR zapobiega niekontrolowanemu składowaniu i nielegalnemu pozbywaniu się odpadów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Istotne znaczenie ma również szybka reakcja w sytuacjach awaryjnych. Procedury obowiązujące przy transporcie ADR pozwalają ograniczyć skalę ewentualnych szkód środowiskowych. Odpowiednie wyposażenie pojazdów umożliwia natychmiastowe działanie w razie wycieku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR wspiera także działania proekologiczne firm. Dzięki zgodnemu z przepisami przewozowi materiałów niebezpiecznych przedsiębiorstwa mogą prowadzić działalność w sposób odpowiedzialny. Ma to znaczenie zarówno dla środowiska, jak i wizerunku firmy.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Najczęstsze błędy przy organizacji przewozu materiałów niebezpiecznych</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Organizacja przewozu materiałów niebezpiecznych wymaga wiedzy i doświadczenia. Jednym z najczęstszych błędów jest niewłaściwe przygotowanie ładunku do transportu. Dotyczy to złego doboru pojemników lub ich nieprawidłowego zabezpieczenia. Takie zaniedbania mogą prowadzić do wycieków oraz zagrożeń na trasie.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Częstym problemem jest także brak kompletnej dokumentacji. Przewóz ADR bez wymaganych dokumentów naraża firmę na kary oraz opóźnienia. Błędy formalne są szczególnie ryzykowne podczas kontroli drogowych. Każdy transport ADR powinien być wcześniej dokładnie sprawdzony pod tym kątem.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Nieprawidłowy dobór pojazdu to kolejny błąd organizacyjny. Przewóz materiałów niebezpiecznych wymaga specjalistycznych środków transportu. Użycie niewłaściwego pojazdu zwiększa ryzyko awarii oraz zagrożenia dla otoczenia. Wpływa to także na bezpieczeństwo kierowcy.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Problemy pojawiają się również przy planowaniu trasy. Pomijanie ograniczeń drogowych lub obszarów wrażliwych może prowadzić do niebezpiecznych sytuacji. Transport ADR powinien być zaplanowany z uwzględnieniem aktualnych warunków drogowych oraz lokalnych przepisów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Brak odpowiedniego przeszkolenia personelu to kolejna częsta przyczyna błędów. Zarówno kierowcy, jak i osoby organizujące przewóz ADR muszą znać procedury bezpieczeństwa. Niedostateczna wiedza zwiększa ryzyko nieprawidłowych decyzji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><noscript><img decoding="async" class="size-full wp-image-3263 aligncenter" src="https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa.webp" alt="transport ADR Warszawa" width="1200" height="800" srcset="https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa.webp 1200w, https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa-300x200.webp 300w, https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa-1030x687.webp 1030w, https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa-768x512.webp 768w, https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa-705x470.webp 705w" sizes="(max-width: 1200px) 100vw, 1200px" /></noscript></p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Dlaczego transport ADR wymaga doświadczenia i zaplecza technicznego</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR należy do najbardziej wymagających form przewozu. Przewóz materiałów niebezpiecznych wiąże się z odpowiedzialnością oraz koniecznością spełnienia wielu wymogów formalnych i technicznych. Brak doświadczenia w tym zakresie może prowadzić do błędów, które niosą poważne konsekwencje.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Doświadczenie pozwala właściwie ocenić ryzyko związane z danym ładunkiem. Każdy przewóz ADR różni się w zależności od rodzaju substancji, jej ilości oraz warunków transportu. Znajomość przepisów i praktycznych rozwiązań umożliwia sprawną organizację całego procesu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Równie ważne jest odpowiednie zaplecze techniczne. Transport materiałów niebezpiecznych wymaga pojazdów przystosowanych do konkretnych ładunków. Znaczenie ma także dostęp do specjalistycznego wyposażenia oraz regularny serwis floty. Bez tego nie jest możliwe zachowanie odpowiedniego poziomu bezpieczeństwa.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Zaplecze techniczne obejmuje również systemy kontroli oraz procedury awaryjne. Dzięki nim możliwa jest szybka reakcja w razie nieprzewidzianych zdarzeń. W transporcie ADR liczy się przygotowanie na każdą ewentualność.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Doświadczenie zespołu wpływa także na sprawną komunikację z klientem oraz instytucjami kontrolnymi. Przewóz materiałów niebezpiecznych często wymaga koordynacji wielu działań. Profesjonalna obsługa pozwala uniknąć opóźnień i problemów formalnych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux łączy doświadczenie z odpowiednim zapleczem technicznym. Każdy transport ADR realizowany jest w oparciu o sprawdzone procedury. Dzięki temu przewóz ADR odbywa się w sposób bezpieczny i zgodny z obowiązującymi przepisami.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Transport ADR Warszawa i okoliczne miejscowości</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR na terenie Warszawy i okolic wymaga dobrej znajomości lokalnych warunków drogowych oraz obowiązujących ograniczeń. Duże natężenie ruchu, strefy miejskie oraz infrastruktura wymagają precyzyjnego planowania trasy. Przewóz materiałów niebezpiecznych w takim obszarze musi być realizowany z zachowaniem szczególnej ostrożności.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Przewóz ADR w aglomeracji warszawskiej często wiąże się z koniecznością dostosowania godzin transportu. Pozwala to ograniczyć ryzyko opóźnień oraz zwiększyć bezpieczeństwo. Właściwa organizacja trasy ma wpływ na sprawność realizacji zlecenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport materiałów niebezpiecznych w okolicach Warszawy obejmuje również obsługę stref przemysłowych oraz terenów podmiejskich. Każda lokalizacja ma swoją specyfikę, dlatego istotne jest elastyczne podejście do planowania przewozu. Znajomość regionu pozwala unikać utrudnień oraz niepotrzebnych przestojów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Profesjonalny transport ADR w tym obszarze wymaga odpowiedniego zaplecza technicznego. Pojazdy muszą być przygotowane do poruszania się zarówno po trasach miejskich, jak i pozamiejskich. Stała kontrola floty zwiększa niezawodność realizowanych usług.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux realizuje przewóz materiałów niebezpiecznych na terenie Warszawy i okolic. Dzięki doświadczeniu oraz znajomości regionu możliwe jest sprawne planowanie transportu. Każdy przewóz ADR realizowany jest z dbałością o bezpieczeństwo oraz terminowość.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Indywidualna wycena i elastyczne podejście do zleceń transportu ADR</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Indywidualna wycena jest istotnym elementem usługi, jaką jest transport ADR. Każdy przewóz materiałów niebezpiecznych różni się zakresem oraz stopniem skomplikowania. Na koszt wpływa rodzaj substancji, jej ilość, długość trasy oraz wymagania dotyczące zabezpieczeń.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Elastyczne podejście pozwala dopasować usługę do realnych potrzeb klienta. Przewóz ADR może mieć charakter jednorazowy lub być realizowany w ramach stałej współpracy. Dzięki temu możliwe jest optymalne zaplanowanie transportu bez zbędnych kosztów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Podczas wyceny analizowane są także warunki realizacji zlecenia. Uwzględnia się miejsce załadunku i rozładunku oraz dostępność infrastruktury. Takie podejście pozwala uniknąć nieprzewidzianych problemów w trakcie przewozu materiałów niebezpiecznych.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR wymaga dokładnego planowania, dlatego elastyczność ma duże znaczenie. Możliwość dostosowania terminów oraz zakresu usługi zwiększa komfort współpracy. Klient otrzymuje rozwiązanie dopasowane do swojej działalności.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Firma Maxi Lux oferuje przejrzyste warunki współpracy oraz indywidualną wycenę każdego zlecenia. Przewóz materiałów niebezpiecznych realizowany jest w sposób rzetelny i zgodny z ustaleniami. Dzięki temu transport ADR przebiega sprawnie i bez zbędnych formalności.</p>
+<h3 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-2xl">FAQ – Najczęściej zadawane pytania dotyczące transportu ADR</h3>
+<h4 class="serif text-blue mb-4 mt-8">Jakie materiały kwalifikują się jako materiały niebezpieczne w transporcie ADR?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Do materiałów niebezpiecznych zaliczane są substancje, które mogą stanowić zagrożenie dla zdrowia ludzi, mienia lub środowiska. Są to między innymi substancje chemiczne, ciecze łatwopalne, materiały żrące, toksyczne oraz odpady zawierające niebezpieczne związki. Przewóz materiałów niebezpiecznych obejmuje także gazy pod ciśnieniem oraz substancje, które w przypadku wycieku mogą powodować skażenie.</p>
+<h4 class="serif text-blue mb-4 mt-8">Czy każdy przewóz materiałów niebezpiecznych wymaga transportu ADR?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Nie każdy przewóz materiałów niebezpiecznych podlega pełnym zasadom transportu ADR. W niektórych przypadkach możliwe są wyłączenia lub uproszczone wymagania. Zależą one od ilości przewożonej substancji oraz jej klasy zagrożenia. W większości sytuacji przewóz ADR jest jednak wymagany, aby zapewnić bezpieczeństwo oraz zgodność z przepisami.</p>
+<h4 class="serif text-blue mb-4 mt-8">Jakie dokumenty są potrzebne przy przewozie ADR?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR wymaga posiadania kompletnej dokumentacji przewozowej. Należą do niej dokument przewozowy zawierający informacje o rodzaju substancji oraz instrukcje bezpieczeństwa dla kierowcy. W przypadku przewozu materiałów niebezpiecznych konieczne są również karty charakterystyki. Prawidłowa dokumentacja jest niezbędna podczas kontroli oraz w sytuacjach awaryjnych.</p>
+<h4 class="serif text-blue mb-4 mt-8">Kto ponosi odpowiedzialność za prawidłowy przewóz materiałów niebezpiecznych?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Odpowiedzialność za prawidłowy przewóz materiałów niebezpiecznych spoczywa na kilku podmiotach. Obejmuje ona nadawcę, firmę realizującą transport ADR oraz kierowcę. Każda ze stron ma określone obowiązki wynikające z przepisów. Właściwa współpraca i zgodność działań pozwalają zapewnić bezpieczny przewóz ADR.</p>
+<h4 class="serif text-blue mb-4 mt-8">Czy transport ADR można realizować na krótkich dystansach?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Transport ADR może być realizowany także na krótkich trasach. Długość przejazdu nie zwalnia z obowiązku przestrzegania przepisów. Przewóz materiałów niebezpiecznych wymaga odpowiednich procedur niezależnie od odległości. Krótkie dystanse również wiążą się z ryzykiem, dlatego wymagają profesjonalnej organizacji.</p>
+<h4 class="serif text-blue mb-4 mt-8">Jakie pojazdy są wykorzystywane do transportu ADR?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Do transportu ADR wykorzystywane są pojazdy przystosowane do przewozu określonych materiałów niebezpiecznych. Są to między innymi cysterny, pojazdy ze specjalnymi zbiornikami oraz środki transportu wyposażone w zabezpieczenia techniczne. Dobór pojazdu zależy od rodzaju substancji oraz jej właściwości. Przewóz materiałów niebezpiecznych wymaga floty spełniającej określone normy.</p>
+<h4 class="serif text-blue mb-4 mt-8">Czy przewóz ADR podlega kontrolom drogowym?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Przewóz ADR podlega regularnym kontrolom drogowym prowadzonym przez uprawnione służby. Sprawdzany jest stan pojazdu, dokumentacja oraz oznakowanie. Kontrole mają na celu zapewnienie bezpieczeństwa i zgodności transportu ADR z przepisami. Braki formalne mogą skutkować sankcjami.</p>
+<h4 class="serif text-blue mb-4 mt-8">Od czego zależy koszt transportu materiałów niebezpiecznych?</h4>
+<p class="text-bone/80 mb-4 leading-relaxed">Koszt transportu materiałów niebezpiecznych zależy od kilku czynników. Wpływ ma rodzaj przewożonej substancji, jej ilość oraz długość trasy. Znaczenie mają także wymagania techniczne oraz zakres formalności. Każdy przewóz ADR jest wyceniany indywidualnie.</p>
+</div></section>
+<div class="av-special-heading av-ml42nnj3-ad60042e358c35e3d1b5e7fc3891faaf av-special-heading-h3 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-13  el_after_av_textblock  el_before_av_textblock  av-thin-font av-inherit-size"><h3 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-2xl" itemprop="headline"><strong>Obszar świadczenia usług Maxi-Lux</strong></h3><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-1-c31fc8077bff447c93fca90859c88f65  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><p class="text-bone/80 mb-4 leading-relaxed"><strong><a href="https://maxi-lux.pl/przepychanie-rur-warszawa/" class="text-blue hover:text-blueSoft underline transition-colors">Warszawa</a>:&nbsp;</strong>Bemowo, Białołęka, Bielany, Mokotów, Ochota, Praga-Południe, Praga-Północ, Rembertów, Śródmieście, Targówek, Ursus, Ursynów, Wawer,&nbsp;Wesoła, Wilanów, Włochy, Wola i Żoliborz.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Powiaty:</strong></p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Wołomiński:&nbsp;</b>Dąbrówka, Klembów, Kobyłka, Marki, Poświętne, Radzymin, Tłuszcz,&nbsp;Wołomin, Ząbki i Zielonka.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Warszawski zachodni:&nbsp;</b>Błonie, Łomianki, Ożarów Mazowiecki, Izabelin, Kampinos, Leszno i Stare Babice.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Piaseczyński:&nbsp;</b>Góra Kalwaria,&nbsp;Konstancin Jeziorna, Piaseczno, Tarczyn, Lesznowola i Prażmów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Pruszkowski:&nbsp;</b>Piastów, Pruszków, Brwinów, Michałowice, Nadarzyn i Raszyn.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Miński:&nbsp;</b>Mińsk Mazowiecki, Sulejówek, Halinów, Kałuszyn, Mrozy, Cegłów, Dębe Wielkie, Dobre, Jakubów, Latowicz, Siennica i Stanisławów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Nowodworski:&nbsp;</b>Nowy Dwór Mazowiecki, Nasielsk, Zakroczym, Czosnów, Leoncin i Pomiechówek.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Otwocki:&nbsp;</b>Celestynów,&nbsp;Kołbiel, Osieck, Sobienie-Jeziory, Wiązowna,&nbsp;Karczew,&nbsp;Józefów&nbsp;i&nbsp;Otwock.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Legionowski:&nbsp;</b>Legionowo, Nieporęt, Serock, Jabłonna, Chotomów i Wieliszew.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Siedlecki:</strong>&nbsp;Domanice, Kotuń, Mokobrody, Paprotnia, Przesmyki,&nbsp;Siedlce, Skórzec, Suchożebry, Wiśniew, Wodynie, Zbuczyn i Mordy.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Garwoliński:</strong>&nbsp;Garwolin, Łaskarzew, Pilawa, Żelechów, Borowie, Górzno, Maciejowice, Miastków Kościelny, Parysów, Sobolew, Trojanów i Wilga.</p>
+</div></section>
+</div></div></div><p class="text-bone/80 mb-4 leading-relaxed"></p>
+<div data-rocket-location-hash="d7e6e4a5cd6da651d79890911470ebb9"><div>		</div><!--end builder template--></div><!-- close default .container_wrap element -->
+
+			<!-- end main -->
+		
+    </div>
+  </div>
+</section><!-- Footer -->
+<footer class="bg-ink border-t border-glassBorder pt-12 pb-6 relative z-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-8">
+    <!-- Adres -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Adres</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p class="font-bold text-bone">MAXI-LUX Krzysztof Jarosiński</p>
+        <p>ul. Wawrzyniecka 78,</p>
+        <p>05-340 Kołbiel k/Warszawy</p>
+        <p class="mt-2">NIP: 521 185 58 30</p>
+        <p>BDO: 000557924</p>
+      </div>
+    </div>
+    
+    <!-- Kontakt -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Kontakt</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p>Telefon: <a href="tel:+48513412313" class="hover:text-blue transition border-b border-blue/30">513 412 313</a></p>
+        <p>E-mail: <a href="mailto:biuro@maxi-lux.pl" class="hover:text-blue transition border-b border-blue/30">biuro@maxi-lux.pl</a></p>
+      </div>
+    </div>
+
+    <!-- Usługi -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Usługi</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Udrażnianie rur kanalizacyjnych</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Pogotowie kanalizacyjne</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Przepychanie rur</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">WUKO</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Czyszczenie separatorów</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Transport ADR</a></p>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-glassBorder flex flex-col md:flex-row items-center justify-between text-xs text-bone/50">
+    <p>Copyright 2026 &copy; Maxi-Lux</p>
+    
+    <div class="flex flex-wrap gap-2 mt-4 md:mt-0 justify-center">
+      <a href="../polityka-prywatnosci.html" class="hover:text-blue transition">Polityka prywatności</a> <span class="mx-1">|</span>
+      <a href="../rodo.html" class="hover:text-blue transition">RODO</a> <span class="mx-1">|</span>
+      <a href="../blog.html" class="hover:text-blue transition">BLOG</a> <span class="mx-1">|</span>
+      <a href="kontakt.html" class="hover:text-blue transition">Kontakt</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-ink/95 backdrop-blur-md hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+      <button id="lightbox-close" class="absolute top-6 right-6 text-bone/50 hover:text-blue text-5xl leading-none transition-colors">×</button>
+      
+      <div class="relative w-full h-full flex items-center justify-center p-4 sm:p-12">
+        <!-- Prev Button -->
+        <button id="lightbox-prev" class="absolute left-2 sm:left-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❮</button>
+        
+        <!-- Image Container -->
+        <div class="relative max-w-full max-h-full flex items-center justify-center">
+          <div id="lightbox-loader" class="absolute inset-0 flex items-center justify-center">
+            <div class="w-12 h-12 border-4 border-glassBorder border-t-blue rounded-full animate-spin"></div>
+          </div>
+          <img id="lightbox-img" class="max-h-[85vh] max-w-[90vw] object-contain rounded-xl shadow-2xl relative z-10 transition-opacity duration-300 opacity-0" src="" alt="Gallery Image" onload="this.classList.remove('opacity-0'); document.getElementById('lightbox-loader').style.display='none';">
+        </div>
+        
+        <!-- Next Button -->
+        <button id="lightbox-next" class="absolute right-2 sm:right-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❯</button>
+      </div>
+      
+      <div id="lightbox-counter" class="absolute bottom-8 text-bone/50 font-serif tracking-widest text-lg"></div>
+    </div>
+
+    <script>
+      const images = ["https://maxi-lux.pl/wp-content/uploads/2026/02/przewoz-materialow-niebezpiecznych.webp","https://maxi-lux.pl/wp-content/uploads/2026/02/oznakowanie-pojazdow-adr.webp","https://maxi-lux.pl/wp-content/uploads/2026/02/transport-adr-warszawa.webp"];
+      let currentIndex = 0;
+      
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const btnClose = document.getElementById('lightbox-close');
+      const btnPrev = document.getElementById('lightbox-prev');
+      const btnNext = document.getElementById('lightbox-next');
+      const counter = document.getElementById('lightbox-counter');
+      const loader = document.getElementById('lightbox-loader');
+      
+      function showImage(index) {
+        if(index < 0) index = images.length - 1;
+        if(index >= images.length) index = 0;
+        currentIndex = index;
+        
+        lightboxImg.classList.add('opacity-0');
+        loader.style.display = 'flex';
+        
+        lightboxImg.src = images[currentIndex];
+        counter.textContent = (currentIndex + 1) + " / " + images.length;
+      }
+      
+      function openLightbox(index) {
+        showImage(index);
+        lightbox.classList.remove('hidden');
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeLightbox() {
+        lightbox.classList.remove('opacity-100');
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+          lightboxImg.src = '';
+        }, 300);
+        document.body.style.overflow = '';
+      }
+      
+      document.querySelectorAll('.gallery-img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-index'));
+          openLightbox(idx);
+        });
+      });
+      
+      btnClose.addEventListener('click', closeLightbox);
+      btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
+      btnNext.addEventListener('click', () => showImage(currentIndex + 1));
+      
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      });
+      
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || (e.target.parentElement === lightbox && e.target !== lightboxImg && e.target !== btnPrev && e.target !== btnNext)) {
+          closeLightbox();
+        }
+      });
+    </script>
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50
+    });
+  });
+</script>
+
+
+
+<!-- Floating Phone Button -->
+<div class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100]">
+  <div class="relative flex items-center justify-center group">
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue opacity-50 animate-ping" style="animation-duration: 2s;"></span>
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue blur-md opacity-50 animate-pulse"></span>
+    <a href="tel:+48513412313" class="relative inline-flex w-14 h-14 md:w-16 md:h-16 bg-blue hover:bg-blueSoft rounded-full items-center justify-center text-ink shadow-2xl transition-transform hover:scale-110">
+      <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
+  </div>
+</div>
+
+
+<script>
+  // Theme Manager
+  function setTheme(theme) {
+    const isLight = theme === 'light';
+    if (isLight) {
+      document.body.classList.add('light-theme');
+      document.getElementById('theme-light-btn').classList.add('border-2', 'border-blue', 'scale-110');
+      document.getElementById('theme-dark-btn').classList.remove('border-2', 'border-white', 'scale-110');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.getElementById('theme-dark-btn').classList.add('border-2', 'border-white', 'scale-110');
+      document.getElementById('theme-light-btn').classList.remove('border-2', 'border-blue', 'scale-110');
+    }
+    localStorage.setItem('maxilux_theme', theme);
+  }
+
+  // Initialize theme on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('maxilux_theme') || 'dark';
+    setTheme(savedTheme);
+  });
+  // Execute immediately to prevent flash of wrong theme
+  const initialTheme = localStorage.getItem('maxilux_theme');
+  if (initialTheme === 'light') { document.body.classList.add('light-theme'); }
+</script>
+
+</body></html>

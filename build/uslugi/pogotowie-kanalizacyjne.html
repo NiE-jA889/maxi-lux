@@ -1,0 +1,664 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAXI-LUX — Pogotowie Kanalizacyjne 24/7 | Warszawa i okolice</title>
+<meta name="description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:title" content="Maxi Lux - Usługi kanalizacyjne i hydrauliczne Warszawa i okolice">
+<meta property="og:description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: 'var(--color-ink)',
+          coal: 'var(--color-coal)',
+          steel: 'var(--color-steel)',
+          bone: 'var(--color-bone)',
+          mist: 'var(--color-mist)',
+          blue: 'var(--color-blue)',
+          blueSoft: 'var(--color-blue-soft)',
+          rust: 'var(--color-rust)',
+          glass: 'var(--color-glass)',
+          glassBorder: 'var(--color-glass-border)',
+        },
+        fontFamily: {
+          serif: ['"Instrument Serif"', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:var(--color-ink); color:var(--color-bone); font-family:Inter,system-ui,sans-serif; transition: background-color 0.4s ease, color 0.4s ease; }
+
+  :root {
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-steel: #1a2530;
+    --color-bone: #f5f2ec;
+    --color-mist: #e5e0d6;
+    --color-glass: rgba(0, 0, 0, 0.3);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --color-blue: #2563eb;
+    --color-blue-soft: #60a5fa;
+    --color-rust: #c94a15;
+  }
+  .light-theme {
+    --color-ink: #ffffff;
+    --color-coal: #f3f4f6;
+    --color-steel: #e5e7eb;
+    --color-bone: #111827;
+    --color-mist: #374151;
+    --color-glass: rgba(255, 255, 255, 0.6);
+    --color-glass-border: rgba(0, 0, 0, 0.25);
+  }
+
+  .serif { font-family:"Instrument Serif", serif; letter-spacing:-0.01em; }
+  .glow { box-shadow: 0 30px 80px -30px rgba(37,99,235,.55); }
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);background-size:3px 3px;mix-blend-mode:overlay;opacity:.35;}
+  .hero-grad{background:linear-gradient(180deg, rgba(11,15,20,.15) 0%, rgba(11,15,20,.6) 45%, rgba(11,15,20,.95) 100%);}
+  .tape{background:repeating-linear-gradient(45deg,#2563eb 0 18px,#0b0f14 18px 36px);}
+  .chip{border:1px solid rgba(245,242,236,.14); background:rgba(245,242,236,.03);}
+  .card-hover{transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s;}
+  .card-hover:hover{transform:translateY(-4px); border-color:rgba(37,99,235,.6);}
+  .btn-primary{background:#2563eb;color:#0b0f14;font-weight:600;transition:all .3s;}
+  .btn-primary:hover{background:#60a5fa;transform:translateY(-2px);box-shadow:0 20px 40px -10px rgba(37,99,235,.5);}
+  .divider{background:linear-gradient(90deg,transparent,rgba(245,242,236,.2),transparent);height:1px;}
+  .pulse-dot{animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+  .marquee{animation:marquee 40s linear infinite;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Lepsza widoczność w jasnym motywie */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.3 !important; /* ciemniejsze paski w tle */
+  }
+  .light-theme footer img[src*="logo.png"] {
+    /* odwracamy kolory loga z białego na czarne z użyciem inwersji i obrotu odcieni, by niebieski został niebieskim! */
+    filter: invert(1) hue-rotate(180deg) brightness(0.8) drop-shadow(0 4px 6px rgba(0,0,0,0.1)) !important;
+  }
+
+
+  /* Hero Text Color Fix in Light Mode */
+  .light-theme .hero-content-wrapper {
+    --color-bone: #f5f2ec;
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-mist: #e5e0d6;
+  }
+  
+  /* Strongly visible cards and lines in Light Mode */
+  .light-theme .border-glassBorder {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+  }
+  .light-theme .bg-glass {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  }
+  /* Bolder background stripes */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.5 !important;
+  }
+  
+
+  /* Fix chip colors in light theme */
+  .light-theme .chip { 
+    border-color: rgba(0,0,0,0.15) !important; 
+    background: rgba(0,0,0,0.03) !important; 
+    color: #111827 !important; 
+  }
+  .light-theme .bg-glass {
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.12), 0 0 20px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+  .light-theme header, .light-theme .emergency-bar {
+    --color-ink: #0b0f14 !important;
+    --color-coal: #111820 !important;
+    --color-steel: #1a2530 !important;
+    --color-bone: #f5f2ec !important;
+    --color-mist: #e5e0d6 !important;
+    --color-glass: rgba(0, 0, 0, 0.3) !important;
+    --color-glass-border: rgba(255, 255, 255, 0.2) !important;
+  }
+  /* Force dark mode background on header explicitly just in case */
+  .light-theme header { background-color: rgba(11, 15, 20, 0.95) !important; border-bottom-color: rgba(255,255,255,0.1) !important; }
+  .light-theme header a, .light-theme header button { color: #f5f2ec !important; }
+  .light-theme header .text-bone\/60 { color: rgba(245, 242, 236, 0.6) !important; }
+  .light-theme header .bg-glass { background-color: rgba(0,0,0,0.3) !important; border-color: rgba(255,255,255,0.2) !important; }
+  .light-theme header svg { stroke: #f5f2ec !important; }
+  .light-theme .emergency-bar-text { color: #f5f2ec !important; }
+
+  /* Dropdowns and mobile menus inside header MUST have a solid dark background in light theme so white text is readable */
+  .light-theme header .bg-glass, .light-theme header #mobile-services-menu, .light-theme .header-dropdown-fix {
+    background-color: #111827 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* Make chip backgrounds slightly darker in light theme so text is more visible */
+  .light-theme .chip {
+    background: rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+  }
+
+  /* Ensure the shadow around bg-glass (cards, pages) is extremely noticeable in light mode */
+  .light-theme .bg-glass {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+  }
+</style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased bg-ink text-bone"><div class="fixed inset-0 z-0 pointer-events-none overflow-hidden aesthetic-stripes" aria-hidden="true">
+  <div class="absolute origin-center" style="top: 54%; left: -3%; width: 140vw; height: 1px; transform: rotate(-32deg); opacity: 0.1; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: -7%; left: -3%; width: 140vw; height: 1px; transform: rotate(-28deg); opacity: 0.13; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 69%; left: 14%; width: 140vw; height: 1px; transform: rotate(-51deg); opacity: 0.15; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 11%; left: 8%; width: 140vw; height: 4px; transform: rotate(-2deg); opacity: 0.05; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 17%; left: 0%; width: 140vw; height: 2px; transform: rotate(56deg); opacity: 0.13; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 7%; left: 16%; width: 140vw; height: 2px; transform: rotate(-27deg); opacity: 0.22; background-color: rgba(37, 99, 235, 1);"></div>
+</div>
+
+<!-- Emergency bar -->
+<div class="tape h-2"></div>
+<div style="background-color: #0b0f14 !important;" class="border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-widest" style="color: #f5f2ec !important;">
+    <div class="flex items-center gap-2" style="color: rgba(245, 242, 236, 0.7) !important;"><span class="pulse-dot w-2 h-2 rounded-full bg-blue"></span> Pogotowie 24/7 · Dojazd nawet w 45 min</div>
+    <a href="tel:+48513412313" class="text-blue font-semibold hover:text-blueSoft">☎ Zadzwoń teraz</a>
+  </div>
+</div>
+
+<!-- Nav -->
+
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-md border-b border-glassBorder shadow-2xl transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-1 flex items-center justify-between">
+    
+      <a href="../index.html" class="flex items-center justify-center overflow-hidden w-40 md:w-56 h-12 md:h-16 relative">
+        <img src="../logo/logo.png" alt="Maxi-Lux Logo" class="absolute w-[200%] h-[200%] object-contain drop-shadow-2xl scale-[1.3] md:scale-[1.5]">
+      </a>
+      
+    
+    
+      <!-- Theme Switcher -->
+      <div class="flex flex-col items-center justify-center mr-6">
+        <div class="flex items-center gap-2 bg-coal/50 backdrop-blur-md rounded-full px-2 py-1 border border-glassBorder mb-1">
+          <button id="theme-dark-btn" onclick="setTheme('dark')" class="w-6 h-6 rounded-full bg-blue hover:scale-110 transition-transform shadow-[0_0_10px_rgba(37,99,235,0.5)] border-2 border-white" aria-label="Dark theme"></button>
+          <button id="theme-light-btn" onclick="setTheme('light')" class="w-6 h-6 rounded-full bg-white hover:scale-110 transition-transform border border-mist shadow-sm" aria-label="Light theme"></button>
+        </div>
+        <span class="text-[9px] uppercase tracking-wider text-mist">Zmień motyw</span>
+      </div>
+<nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-bone/90">
+      
+      <a href="../index.html" class="hover:text-blue transition-colors">Home</a>
+      <a href="../o-nas.html" class="hover:text-blue transition-colors">O nas</a>
+      
+      <!-- Dropdown -->
+      <div class="relative group py-4">
+        <button class="flex items-center gap-1 hover:text-blue transition-colors focus:outline-none">
+          Usługi 
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <!-- The dropdown menu -->
+        <div class="absolute top-full left-0 mt-0 w-80 border border-glassBorder rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden z-50 bg-glass backdrop-blur-md">
+          <div class="py-2 flex flex-col text-xs">
+            <a href="udraznianie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Przepychanie rur</a>
+            <a href="wuko.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue transition-colors">Transport ADR</a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="../wywoz-odpadow.html" class="hover:text-blue transition-colors">Wywóz odpadów</a>
+      <a href="../galeria.html" class="hover:text-blue transition-colors">Galeria</a>
+      <a href="../dokumenty.html" class="hover:text-blue transition-colors">Dokumenty</a>
+      <a href="../kontakt.html" class="hover:text-blue transition-colors">Kontakt</a>
+      <a href="../praca.html" class="hover:text-blue transition-colors">Praca</a>
+      
+      <button class="hover:text-blue transition-colors ml-2" aria-label="Szukaj">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </button>
+    
+    </nav>
+    
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-blueSoft transition-colors shadow-lg shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="mobile-menu-btn" onclick="event.preventDefault(); const m = document.getElementById('mobile-menu'); if(m.style.display === 'block') { m.style.display = 'none'; } else { m.style.display = 'block'; }" class="lg:hidden text-bone focus:outline-none p-2 hover:text-blue transition-colors">
+      <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display: none;" class="lg:hidden bg-coal border-t border-glassBorder absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto shadow-2xl w-full">
+    <div class="px-6 py-4 flex flex-col font-medium text-bone/90">
+      
+      <a href="../index.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Home</a>
+      <a href="../o-nas.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">O nas</a>
+      
+      <!-- Dropdown -->
+      
+          
+        <div class="border-b border-white/5">
+          <button id="mobile-services-btn" onclick="event.preventDefault(); const m = this.nextElementSibling; if(m.classList.contains('hidden')){ m.classList.remove('hidden'); m.style.display='flex'; this.querySelector('svg').style.transform='rotate(180deg)'; } else { m.classList.add('hidden'); m.style.display='none'; this.querySelector('svg').style.transform='rotate(0deg)'; }" class="w-full text-left px-2 py-3 hover:text-blue flex items-center justify-between font-medium">
+            Usługi
+            <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="mobile-services-menu" class="hidden flex-col pl-4 text-sm bg-black/20 pb-2">
+            
+            <a href="udraznianie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Przepychanie rur</a>
+            <a href="wuko.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Transport ADR</a>
+          
+      
+          </div>
+        </div>
+      
+      
+      <a href="../wywoz-odpadow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Wywóz odpadów</a>
+      <a href="../galeria.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Galeria</a>
+      <a href="../dokumenty.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Dokumenty</a>
+      <a href="../kontakt.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Kontakt</a>
+      <a href="../praca.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Praca</a>
+      
+      
+    
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-4 rounded-full text-center mt-6 font-bold shadow-xl shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+  </div>
+</header>
+  
+
+<!-- Hero -->
+<section class="py-24 relative min-h-[70vh] overflow-hidden z-10">
+
+
+  <div class="max-w-[1000px] mx-auto px-6 relative z-10">
+    <div class="rounded-[2rem] border border-glassBorder p-10 md:p-16 overflow-hidden bg-glass backdrop-blur-md"><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 border-glassBorder mb-12 pb-12 border-b"><div class="col-span-full mb-2" data-aos="fade-up"><h3 class="serif text-3xl text-blue">Galeria z realizacji</h3></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2024/08/pogotowie-kanalizacyjne-warszawa-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="0"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2024/08/wuko-warszawa-srodmiescie-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="1"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2024/08/wuko-srodmiescie-warszawa-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="2"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2024/06/udrazniannie-kanalizacji-wuko-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="3"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-kanalizacyjnych-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="4"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/05/mechaniczne-przepychanie-rur-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="5"></div></div>
+      
+
+	<div id="av-layout-grid-1" class="av-layout-grid-container av-feam1-0fb216fe8a83d60d07c2ad5924d0afe4 entry-content-wrapper main_color av-flex-cells  avia-builder-el-0  el_before_av_layout_row  avia-builder-el-first   container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-3fe00d6b290399c8da580195959a089f av-gridrow-cell av_one_half no_margin  avia-builder-el-1  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div><div class="flex_cell av-k05683dy-6d4b2df8584415a54098736abbdab7f5 av-gridrow-cell av_one_half no_margin  avia-builder-el-2  el_after_av_cell_one_half  avia-builder-el-last  content-align-top"><div class="flex_cell_inner">
+<div class="av-special-heading av-fjpgh-c6f979a439b53484f73bbdff11249956 av-special-heading-h1 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-3  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h1 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-4xl md:text-5xl border-b border-glassBorder pb-4" itemprop="headline" data-aos="fade-up"><strong>Pogotowie kanalizacyjne 24h</strong></h1><div class="av_custom_color av-subheading av-subheading_below"><p class="text-bone/80 mb-4 leading-relaxed">Zawsze tam gdzie wymagana jest natychmiastowa pomoc</p>
+</div><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-6e304377ad557a2203c352f1f341dc6f  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Pogotowie kanalizacyjne <a href="tel:513 412 313" class="text-blue hover:text-blueSoft underline transition-colors">513 412 313</a></h2>
+<p style="font-weight: 400;" class="text-bone/80 mb-4 leading-relaxed">Awaria instalacji kanalizacyjnej zawsze wydarza się w najmniej oczekiwanym momencie. Najczęściej nie możemy jej przewidzieć i stosownie przygotować. W przypadku tego rodzaju usterki oczekujemy szybkiej, fachowej i skutecznej pomocy specjalisty.</p>
+<p style="font-weight: 400;" class="text-bone/80 mb-4 leading-relaxed">W trosce o jak najwyższy standard obsługi przygotowaliśmy dla Państwa specjalistyczną usługę jaką jest <strong>pogotowie kanalizacyjne</strong>. W sytuacjach alarmowych jesteśmy dostępni 24h przez 7 dni w tygodniu. Gwarantujemy ekspresową reakcję na otrzymane zgłoszenia, szybkie usunięcie usterki i najlepsze ceny.</p>
+<p style="text-align: left;" class="text-bone/80 mb-4 leading-relaxed">
+</p></div></section>
+<div class="avia-video av-lbi5dqg0-51e64fba93928a7053cbb28eb8d1b952 avia-video-16-9 av-no-preview-image avia-video-load-always av-lazyload-immediate av-lazyload-video-embed" itemprop="video" itemtype="https://schema.org/VideoObject" data-original_url="https://www.youtube.com/watch?v=__GE7BySsao"><div class="av-click-to-play-overlay"><div class="avia_playpause_icon"></div></div></div>
+</div></div></div><div id="av-layout-grid-2" class="av-layout-grid-container av-8vmb5-f87b83e11225000b3d568a95da9638e0 entry-content-wrapper main_color av-flex-cells  avia-builder-el-6  el_after_av_layout_row  el_before_av_layout_row  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-7-0cd2f05468a4ea6294287adc4e48dba6 av-gridrow-cell av_one_half no_margin  avia-builder-el-7  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+<div class="av-special-heading av-8iont-95493025f30557d98e3ecb082159677c av-special-heading-h2 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-8  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h2 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-3xl" itemprop="headline" data-aos="fade-up"><strong>Usługi pogotowia kanalizacyjnego</strong></h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-5-76ed8ffd2d9714d70bce60a60564aa26  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><p style="font-weight: 400;" class="text-bone/80 mb-4 leading-relaxed">Próżno szukać gorszej niedogodności wewnątrz budynku od tej jaką jest awaria instalacji kanalizacyjnej. Niedrożna lub uszkodzona rura może doprowadzić do zalania nieruchomości i w efekcie bardzo nieprzyjemnych konsekwencji. W każdej niemiłej sytuacji niezastąpionym będzie nasze <strong>pogotowie kanalizacyjne</strong>. Oferowaną przez naszą firmę <strong>usługę pogotowia kanalizacyjnego</strong> świadczymy głównie pojazdem WUKO wyposażonego we wszelki niezbędny do szybkiego i skutecznego rozwiązania problemu sprzęt.</p>
+<p style="font-weight: 400;" class="text-bone/80 mb-4 leading-relaxed">Jesteśmy doświadczoną grupą specjalistów, dlatego gwarantujemy, że kompleksowo rozwiążemy każdy problem.</p>
+<p style="text-align: left;" class="text-bone/80 mb-4 leading-relaxed">
+</p></div></section>
+<div class="avia-video av-mkpb7qv0-140f47ced4ea42280e56e258fad11ddb avia-video-16-9 av-no-preview-image avia-video-load-always av-lazyload-immediate av-lazyload-video-embed" itemprop="video" itemtype="https://schema.org/VideoObject" data-original_url="https://www.youtube.com/watch?v=KU8keb-omr0"><div class="av-click-to-play-overlay"><div class="avia_playpause_icon"></div></div></div>
+</div></div><div class="flex_cell av-k05683dy-6-1c16e9906354bcf3a3881fc6ac32eea5 av-gridrow-cell av_one_half no_margin  avia-builder-el-11  el_after_av_cell_one_half  avia-builder-el-last  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div></div><div id="av-layout-grid-3" class="av-layout-grid-container av-8vmb5-4-9ebfd256f0adf48e26631973e600965a entry-content-wrapper main_color av-flex-cells  avia-builder-el-12  el_after_av_layout_row  avia-builder-el-last  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-3-696bc1ea3c47f4137116ae880939edb1 av-gridrow-cell av_one_full no_margin  avia-builder-el-13  avia-builder-el-no-sibling  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+<div class="av-special-heading av-7a1ep-c287b7eb48d3c1a4606c9f9cb33b7732 av-special-heading-h2 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-14  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h2 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-3xl" itemprop="headline" data-aos="fade-up"><strong>Jak działa pogotowie kanalizacyjne 24h?</strong></h2><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-2-e41c29a31d0c827d271af5fc2663b0e7  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><p class="text-bone/80 mb-4 leading-relaxed">Pogotowie kanalizacyjne 24h firmy Maxi-Lux to usługa zaprojektowana, aby zapewnić szybką i efektywną reakcję na wszelkie problemy kanalizacyjne, które mogą wystąpić w dowolnym momencie – dzień czy noc. Oto, jak funkcjonuje ten kluczowy serwis:</p>
+<ol class="list-decimal pl-6 mb-6">
+<li class="text-bone/80 mb-4 leading-relaxed">Zgłoszenie Awarii. Gdy tylko pojawi się problem kanalizacyjny, wystarczy zadzwonić na nasz dedykowany numer alarmowy, który jest dostępny 24 godziny na dobę, 7 dni w tygodniu. Nasi konsultanci są przygotowani, aby przyjąć zgłoszenie i szybko ocenić sytuację.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Diagnoza Problemu. Po otrzymaniu zgłoszenia, nasi specjaliści dokładnie analizują opis sytuacji, aby zrozumieć charakter problemu. W zależności od jego rodzaju i skali, planujemy najbardziej odpowiedni sposób interwencji. W niektórych przypadkach możliwe jest nawet udzielenie pierwszej pomocy telefonicznej, która może tymczasowo zaradzić problemowi.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Wysyłka Zespołu. Natychmiast po diagnozie, wysyłamy na miejsce zespół techników wyposażony w specjalistyczny sprzęt, w tym pojazdy WUKO, które są przystosowane do szybkiego i skutecznego rozwiązania problemów kanalizacyjnych. Nasi technicy są wysoko wykwalifikowani i doświadczeni w pracy w różnych warunkach, co zapewnia profesjonalizm i efektywność działań.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Rozwiązanie Problemu. Po przybyciu na miejsce, technicy przystępują do bezpośredniej naprawy. Dzięki zaawansowanemu sprzętowi WUKO, większość problemów kanalizacyjnych, takich jak zatory czy przelania, jest usuwana na miejscu, bez potrzeby długotrwałych prac czy znacznych wykopów.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Weryfikacja i Zakończenie. Gdy problem zostanie rozwiązany, przeprowadzamy końcową inspekcję, aby upewnić się, że wszystko funkcjonuje prawidłowo. Nasi klienci są informowani o wykonanych działaniach oraz otrzymują zalecenia dotyczące dalszego użytkowania i ewentualnej konserwacji instalacji.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Obsługa Posprzedażowa. Po zakończeniu interwencji, nasza firma pozostaje w kontakcie z klientem, oferując wsparcie i pomoc w razie dodatkowych pytań czy potrzeb. Dbamy o to, aby każdy klient był w pełni zadowolony z jakości naszych usług.</li>
+</ol>
+<p class="text-bone/80 mb-4 leading-relaxed">Dzięki pogotowiu kanalizacyjnemu 24h od Maxi-Lux, mieszkańcy i przedsiębiorcy mogą liczyć na szybką i profesjonalną pomoc w każdej sytuacji. Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach lub w przypadku nagłej potrzeby interwencji kanalizacyjnej.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Typowe sytuacje wymagające interwencji pogotowia kanalizacyjnego</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Pogotowie kanalizacyjne 24h firmy Maxi-Lux jest gotowe, aby szybko reagować na różnorodne awarie i problemy z systemami kanalizacyjnymi. Rozumienie typowych sytuacji, które wymagają naszej interwencji, może pomóc mieszkańcom i przedsiębiorcom w lepszym przygotowaniu się do potencjalnych problemów i wiedzy, kiedy konieczne jest wezwanie specjalistów. Oto kilka najczęstszych przypadków, kiedy nasze pogotowie kanalizacyjne jest nieocenione:</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Zatory Kanalizacyjne</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">Jedną z najczęstszych przyczyn wezwań są zatory w kanalizacji, które mogą powodować wolny przepływ ścieków, cofanie się wody i nieprzyjemne zapachy. Zatory te często wynikają z nagromadzenia tłuszczów, olejów, papieru toaletowego i innych materiałów, które nie powinny znaleźć się w kanalizacji.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Przepełnienia i Przelania</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">Intensywne deszcze czy uszkodzenia mechaniczne mogą prowadzić do przepełnień lub przelania ścieków, co stanowi poważne zagrożenie zarówno dla zdrowia publicznego, jak i dla środowiska. Szybka interwencja jest kluczowa, aby zminimalizować szkody i przywrócić normalne funkcjonowanie systemu.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Uszkodzenia Rur</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">Starzenie się infrastruktury, korozja, korzenie drzew czy prace budowlane mogą spowodować uszkodzenia rur kanalizacyjnych. Takie problemy wymagają natychmiastowej oceny i naprawy, aby uniknąć dalszych uszkodzeń i kosztownych awarii.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Niesprawne Pompy i Zawory</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">W systemach kanalizacyjnych, które wykorzystują pompy czy zawory do transportu ścieków, ich awarie mogą spowodować poważne problemy operacyjne. Pogotowie kanalizacyjne jest wyposażone w narzędzia i wiedzę, aby szybko diagnozować i naprawiać te elementy.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Nieprzyjemne Zapachy</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">Czasami wystarczającym powodem do wezwania pogotowia kanalizacyjnego są nieprzyjemne zapachy wydobywające się z systemu. Może to być sygnał większych problemów ukrytych w kanalizacji, które wymagają profesjonalnej interwencji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Nasze pogotowie kanalizacyjne 24h jest przygotowane do radzenia sobie z tymi i wieloma innymi sytuacjami, zapewniając szybką i skuteczną pomoc. Jesteśmy wyposażeni w nowoczesne narzędzia i metody, które pozwalają nam efektywnie rozwiązywać problemy kanalizacyjne, minimalizując dyskomfort i potencjalne szkody dla naszych klientów. Jeśli napotkasz którykolwiek z tych problemów, nie wahaj się skontaktować z Maxi-Lux — jesteśmy tutaj, aby pomóc o każdej porze.</p>
+</div></section>
+
+<section class="av_textblock_section av-k03sgxkz-1-cabc9c1c7d0b4b939a64b2176c6224f8  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Zalety szybkiej interwencji pogotowia kanalizacyjnego</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Szybka reakcja w przypadku awarii kanalizacyjnej jest kluczowa nie tylko dla uniknięcia natychmiastowych niedogodności, ale również dla zapobiegania długoterminowym problemom, które mogą wyniknąć z opóźnionej interwencji. Oto kilka kluczowych zalet, które niesie ze sobą szybka interwencja naszego pogotowia kanalizacyjnego 24h:</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Szybka interwencja pogotowia kanalizacyjnego 24/7</h3>
+<ul class="list-disc pl-6 mb-6">
+<li class="text-bone/80 mb-4 leading-relaxed">Minimalizacja Uszkodzeń. Szybkie reagowanie na problemy kanalizacyjne, takie jak zatory czy przelania, może znacząco ograniczyć zakres szkód. Na przykład, natychmiastowa interwencja w przypadku przelania może zapobiec rozprzestrzenianiu się wody, co chroni struktury budynku przed uszkodzeniami wodnymi i pleśnią.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Oszczędność Kosztów. Choć może się wydawać, że szybkie wezwanie specjalistów jest kosztowne, w rzeczywistości może to prowadzić do oszczędności. Dłuższe czekanie na rozwiązanie problemu często skutkuje większymi, bardziej skomplikowanymi i droższymi naprawami. Szybka interwencja pozwala na rozwiązanie problemu, zanim przekształci się on w większą awarię.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Zapobieganie Problemom Zdrowotnym. Przelania i zatory mogą prowadzić do wystąpienia szkodliwych bakterii i pleśni, które mogą negatywnie wpłynąć na jakość powietrza wewnątrz pomieszczeń. Szybkie usunięcie przyczyn tych problemów jest kluczowe dla ochrony zdrowia mieszkańców i użytkowników danej nieruchomości.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Zmniejszenie Dyskomfortu. Awaria kanalizacji może być źródłem znacznego dyskomfortu dla mieszkańców i właścicieli nieruchomości. Nieprzyjemne zapachy, niemożność korzystania z łazienki czy kuchni to tylko niektóre z problemów, które mogą zakłócić codzienne życie. Szybkie przywrócenie normalnego funkcjonowania kanalizacji minimalizuje te niedogodności.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Utrzymanie Standardów Sanitarnych. W obiektach komercyjnych, takich jak restauracje czy hotele, standardy sanitarne są szczególnie ważne. Szybka reakcja na problemy kanalizacyjne pomaga utrzymać te standardy, zapobiegając potencjalnym inspekcjom i karom za naruszenie norm sanitarnych.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Poprawa Bezpieczeństwa. W przypadkach, gdy awaria kanalizacji prowadzi do wydostania się ścieków na powierzchnię, istnieje ryzyko poślizgnięcia się i upadku. Szybkie działania naszego pogotowia kanalizacyjnego eliminują takie zagrożenia, czyniąc otoczenie bezpieczniejszym dla wszystkich.</li>
+</ul>
+<p class="text-bone/80 mb-4 leading-relaxed"><a href="https://maps.app.goo.gl/QSgUgFyFFzzYbtEg8" class="text-blue hover:text-blueSoft underline transition-colors">Maxi-Lux</a> oferuje nie tylko szybką, ale i skuteczną reakcję na wszelkie awarie kanalizacyjne. Nasze pogotowie kanalizacyjne 24h jest dostępne w Warszawie oraz okolicznych miejscowościach, aby zapewnić natychmiastową pomoc w każdej sytuacji, minimalizując negatywne skutki awarii i przywracając spokój oraz komfort naszym klientom. Skontaktuj się z nami w każdej potrzebie – jesteśmy gotowi pomóc o każdej porze dnia i nocy.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Technologie i wyposażenie używane przez pogotowie hydrauliczno-kanalizacyjne</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Nasze pogotowie kanalizacyjne 24h korzysta z najnowocześniejszych technologii i wyposażenia, aby zapewnić szybką, efektywną i bezpieczną obsługę wszelkich problemów kanalizacyjnych. Wykorzystanie zaawansowanego sprzętu nie tylko zwiększa skuteczność naszych interwencji, ale także chroni infrastrukturę i środowisko. Oto kluczowe elementy naszego wyposażenia:</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Wyposażenie pogotowia hydrauliczno-kanalizacyjnego</h3>
+<ul class="list-disc pl-6 mb-6">
+<li class="text-bone/80 mb-4 leading-relaxed">Pojazdy WUKO. Nasz flagowy sprzęt, pojazdy WUKO, są specjalnie przystosowane do pracy w trudnych warunkach miejskich. Wyposażone w systemy wysokociśnieniowego czyszczenia, są one w stanie szybko i skutecznie usuwać zatory, osady i inne zanieczyszczenia z rur kanalizacyjnych. Ich wszechstronność pozwala na działanie w różnorodnych scenariuszach, od małych interwencji po duże projekty infrastrukturalne.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Kamery Inspekcyjne. Do diagnozowania stanu kanalizacji używamy zaawansowanych kamer inspekcyjnych, które umożliwiają dokładne badanie wnętrza rur bez konieczności ich otwierania czy wykopywania. Dzięki temu możemy precyzyjnie zlokalizować problem i ocenić stan infrastruktury, co jest kluczowe dla planowania skutecznych działań naprawczych.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Systemy Lokalizacji GPS. Wykorzystujemy również systemy GPS do szybkiego lokalizowania miejsc awarii oraz planowania najkrótszej i najefektywniejszej trasy dojazdu. To pozwala nam minimalizować czas reakcji, co jest szczególnie ważne w nagłych przypadkach.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Narzędzia do Frezowania i Cięcia. Dysponujemy specjalistycznymi narzędziami do frezowania i cięcia, które umożliwiają usunięcie trudnych zatorów i przeszkód, takich jak korzenie drzew czy zastałe osady mineralne. Te narzędzia są niezastąpione w trudniejszych interwencjach, gdzie standardowe metody mogą okazać się niewystarczające.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Pompy Ssące i Płuczki. Dla sytuacji, w których konieczne jest szybkie opróżnienie zalanego obszaru, używamy pomp ssących i płuczek. Są one skuteczne w usuwaniu dużych ilości wody i ścieków, co jest kluczowe dla zapobiegania dalszym szkodom i przywracania normalnego funkcjonowania obiektów.</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Ekologiczne Środki Czyszczące. W trosce o środowisko stosujemy również środki czyszczące, które są bezpieczne dla ekosystemu. Zapewniają one efektywne czyszczenie, jednocześnie chroniąc naturę przed szkodliwymi substancjami.</li>
+</ul>
+<p class="text-bone/80 mb-4 leading-relaxed">Korzystanie z tych zaawansowanych technologii i narzędzi pozwala naszemu pogotowiu kanalizacyjnemu 24h nie tylko na szybką i efektywną reakcję na problemy, ale także na działanie w sposób odpowiedzialny i zrównoważony. Dzięki temu nasi klienci mogą być pewni, że otrzymają pomoc na najwyższym poziomie, z poszanowaniem ich potrzeb oraz ochroną ich infrastruktury i środowiska.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Często zadawane pytania (FAQ) o pogotowie kanalizacyjne 24h</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">W odpowiedzi na liczne zapytania naszych klientów, przygotowaliśmy zestaw najczęściej zadawanych pytań dotyczących naszego pogotowia kanalizacyjnego 24h. Oto odpowiedzi, które pomogą rozwiać Twoje wątpliwości i dostarczyć potrzebnych informacji o naszych usługach.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Jak szybko można oczekiwać interwencji po zgłoszeniu?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Dzięki lokalnej obecności naszego zespołu, jesteśmy w stanie zareagować na większość zgłoszeń w ciągu jednej godziny od otrzymania zgłoszenia.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Jakie są najczęstsze przyczyny awarii kanalizacji, z którymi się spotykacie?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Najczęstsze problemy to zatory spowodowane nagromadzeniem tłuszczów, olejów, nieodpowiednich materiałów (np. chusteczki, ręczniki papierowe) oraz uszkodzenia mechaniczne rur, często wynikające z korozji lub niewłaściwej eksploatacji.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Czy można zapobiegać problemom kanalizacyjnym?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Tak, regularne przeglądy i czyszczenie systemów kanalizacyjnych są kluczowe, aby zapobiegać większości awarii. Oferujemy również usługi doradztwa w zakresie optymalnej eksploatacji instalacji kanalizacyjnych.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Jakie środki bezpieczeństwa stosuje wasza ekipa podczas pracy?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Nasz zespół stosuje środki ochrony osobistej, w tym kombinezony, rękawice i maski, a także przestrzega rygorystycznych procedur bezpieczeństwa, aby zminimalizować ryzyko dla zdrowia i bezpieczeństwa zarówno pracowników, jak i mieszkańców.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Czy usługi pogotowia obejmują również naprawy?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Tak, nasze pogotowie kanalizacyjne jest wyposażone w narzędzia i sprzęt potrzebne do wykonania większości napraw na miejscu, co pozwala na szybkie przywrócenie pełnej funkcjonalności systemu kanalizacyjnego.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Jakie są koszty usługi pogotowia kanalizacyjnego 24h?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Odp.:</strong> Koszty usługi mogą się różnić w zależności od rodzaju i skali problemu, jednak zawsze staramy się oferować konkurencyjne ceny. Dla stałych klientów oraz w ramach umów serwisowych proponujemy specjalne warunki cenowe.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Mamy nadzieję, że te odpowiedzi pomogły Ci lepiej zrozumieć, jak działamy i co możesz oczekiwać, korzystając z naszego pogotowia kanalizacyjnego 24h. Jeśli masz więcej pytań lub potrzebujesz natychmiastowej pomocy, nie wahaj się skontaktować z nami – jesteśmy do Twojej dyspozycji o każdej porze dnia i nocy.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Pogotowie kanalizacyjne 24H szybki kontakt</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Dostępność naszego pogotowia kanalizacyjnego 24h jest kluczowa, by zapewnić szybką pomoc w nagłych przypadkach. Oto, jak możesz się z nami skontaktować i co warto wiedzieć, by zgłoszenie zostało obsłużone sprawnie i efektywnie.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Jak Zgłosić Awarię?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Telefonicznie:</strong> Najskuteczniejszym i najszybszym sposobem zgłoszenia jest kontakt telefoniczny. Nasz numer alarmowy to 513 412 313, dostępny 24/7. Połączenie telefoniczne pozwala na natychmiastową reakcję i szczegółowe omówienie problemu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Online:</strong> Możesz także skorzystać z formularza zgłoszeniowego na naszej stronie internetowej. Wypełnij niezbędne dane i opisz problem, a nasi specjaliści skontaktują się z Tobą, aby omówić szczegóły interwencji.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Co Przygotować Przed Zgłoszeniem?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Opis Problemu:</strong> Staraj się jak najdokładniej opisać, co się dzieje, w tym wszelkie objawy awarii, jak nieprzyjemne zapachy, wolny odpływ wody, czy cofanie się ścieków. Im więcej informacji dostarczysz, tym szybciej będziemy mogli zdiagnozować problem i przygotować odpowiednie działania.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Lokalizacja:</strong> Podaj dokładny adres i, jeśli to możliwe, szczegółowe informacje dotyczące lokalizacji problemu w budynku, co znacznie przyspieszy lokalizację awarii przez naszych techników.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Dostępność:</strong> Jeśli to możliwe, zaznacz, czy miejsce, w którym występuje problem, jest łatwo dostępne, czy są jakieś specjalne instrukcje dotyczące wejścia na teren nieruchomości, które mogą być potrzebne naszym technikom.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Nasze Zobowiązanie</h3>
+<p class="text-bone/80 mb-4 leading-relaxed">W Maxi-Lux rozumiemy, jak stresująca może być nagła awaria kanalizacji. Naszym priorytetem jest zapewnienie, że Twoje zgłoszenie zostanie obsłużone szybko i profesjonalnie. Dzięki naszej lokalnej obecności w Warszawie Śródmieście, jesteśmy w stanie zaoferować ekspresową reakcję, minimalizując niedogodności i potencjalne szkody.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Zachęcamy do korzystania z naszych usług pogotowia kanalizacyjnego 24h w przypadku jakichkolwiek problemów z kanalizacją. Jesteśmy tutaj, by pomóc – niezależnie od dnia czy godziny.</p>
+<h2 style="text-align: center;" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Pogotowie kanalizacyjne 24/7 Warszawa i okoliczne miejscowości</h2>
+<p style="text-align: left;" class="text-bone/80 mb-4 leading-relaxed"><strong style="font-size: 16px;"><a href="https://maxi-lux.pl/pogotowie-kanalizacyjne/warszawa/" class="text-blue hover:text-blueSoft underline transition-colors">Warszawa</a>:&nbsp;</strong>Bemowo<span style="font-size: 16px;">,&nbsp;</span>Białołęka<span style="font-size: 16px;">,&nbsp;</span>Bielany<span style="font-size: 16px;">,&nbsp;</span>Mokotów<span style="font-size: 16px;">,&nbsp;</span>Ochota<span style="font-size: 16px;">, Praga-Południe, Praga-Północ, </span>Rembertów<span style="font-size: 16px;">,&nbsp;</span>Śródmieście<span style="font-size: 16px;">, Targówek, Ursus, Ursynów, Wawer,&nbsp;</span>Wesoła<span style="font-size: 16px;">, Wilanów,&nbsp;</span>Włochy<span style="font-size: 16px;">,&nbsp;</span>Wola<span style="font-size: 16px;">&nbsp;i Żoliborz.</span></p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Powiaty:</strong></p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Wołomiński:&nbsp;</b>Dąbrówka, Klembów, Kobyłka, Marki, Poświętne, Radzymin, Tłuszcz,&nbsp;Wołomin, Ząbki i Zielonka.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Warszawski zachodni:&nbsp;</b>Błonie, Łomianki, Ożarów Mazowiecki, Izabelin, Kampinos, Leszno i Stare Babice.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Piaseczyński:&nbsp;</b>Góra Kalwaria,&nbsp;Konstancin Jeziorna, Piaseczno, Tarczyn, Lesznowola i Prażmów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Pruszkowski:&nbsp;</b>Piastów, Pruszków, Brwinów, Michałowice, Nadarzyn i Raszyn.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Miński:&nbsp;</b>Mińsk Mazowiecki, Sulejówek, Halinów, Kałuszyn, Mrozy, Cegłów, Dębe Wielkie, Dobre, Jakubów, Latowicz, Siennica i Stanisławów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Nowodworski:&nbsp;</b>Nowy Dwór Mazowiecki, Nasielsk, Zakroczym, Czosnów, Leoncin i Pomiechówek.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Otwocki:&nbsp;</b>Celestynów,&nbsp;Kołbiel, Osieck, Sobienie-Jeziory,&nbsp;Wiązowna,&nbsp;Karczew,&nbsp;Józefów&nbsp;i&nbsp;Otwock.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Legionowski:&nbsp;</b>Legionowo, Nieporęt, Serock, Jabłonna, Chotomów i Wieliszew.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Siedlecki:</strong>&nbsp;Domanice, Kotuń, Mokobrody, Paprotnia, Przesmyki,&nbsp;Siedlce, Skórzec, Suchożebry, Wiśniew, Wodynie, Zbuczyn i Mordy.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Garwoliński:</strong>&nbsp;Garwolin, Łaskarzew, Pilawa, Żelechów, Borowie, Górzno, Maciejowice, Miastków Kościelny, Parysów, Sobolew, Trojanów i Wilga.</p>
+</div></section>
+</div></div>
+</div><p class="text-bone/80 mb-4 leading-relaxed"></p>
+<div data-wpr-lazyrender="1"><div>		</div><!--end builder template--></div><!-- close default .container_wrap element -->
+
+			<!-- end main -->
+		
+    </div>
+  </div>
+</section><!-- Footer -->
+<footer class="bg-ink border-t border-glassBorder pt-12 pb-6 relative z-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-8">
+    <!-- Adres -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Adres</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p class="font-bold text-bone">MAXI-LUX Krzysztof Jarosiński</p>
+        <p>ul. Wawrzyniecka 78,</p>
+        <p>05-340 Kołbiel k/Warszawy</p>
+        <p class="mt-2">NIP: 521 185 58 30</p>
+        <p>BDO: 000557924</p>
+      </div>
+    </div>
+    
+    <!-- Kontakt -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Kontakt</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p>Telefon: <a href="tel:+48513412313" class="hover:text-blue transition border-b border-blue/30">513 412 313</a></p>
+        <p>E-mail: <a href="mailto:biuro@maxi-lux.pl" class="hover:text-blue transition border-b border-blue/30">biuro@maxi-lux.pl</a></p>
+      </div>
+    </div>
+
+    <!-- Usługi -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Usługi</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Udrażnianie rur kanalizacyjnych</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Pogotowie kanalizacyjne</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Przepychanie rur</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">WUKO</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Czyszczenie separatorów</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Transport ADR</a></p>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-glassBorder flex flex-col md:flex-row items-center justify-between text-xs text-bone/50">
+    <p>Copyright 2026 &copy; Maxi-Lux</p>
+    
+    <div class="flex flex-wrap gap-2 mt-4 md:mt-0 justify-center">
+      <a href="../polityka-prywatnosci.html" class="hover:text-blue transition">Polityka prywatności</a> <span class="mx-1">|</span>
+      <a href="../rodo.html" class="hover:text-blue transition">RODO</a> <span class="mx-1">|</span>
+      <a href="../blog.html" class="hover:text-blue transition">BLOG</a> <span class="mx-1">|</span>
+      <a href="kontakt.html" class="hover:text-blue transition">Kontakt</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-ink/95 backdrop-blur-md hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+      <button id="lightbox-close" class="absolute top-6 right-6 text-bone/50 hover:text-blue text-5xl leading-none transition-colors">×</button>
+      
+      <div class="relative w-full h-full flex items-center justify-center p-4 sm:p-12">
+        <!-- Prev Button -->
+        <button id="lightbox-prev" class="absolute left-2 sm:left-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❮</button>
+        
+        <!-- Image Container -->
+        <div class="relative max-w-full max-h-full flex items-center justify-center">
+          <div id="lightbox-loader" class="absolute inset-0 flex items-center justify-center">
+            <div class="w-12 h-12 border-4 border-glassBorder border-t-blue rounded-full animate-spin"></div>
+          </div>
+          <img id="lightbox-img" class="max-h-[85vh] max-w-[90vw] object-contain rounded-xl shadow-2xl relative z-10 transition-opacity duration-300 opacity-0" src="" alt="Gallery Image" onload="this.classList.remove('opacity-0'); document.getElementById('lightbox-loader').style.display='none';">
+        </div>
+        
+        <!-- Next Button -->
+        <button id="lightbox-next" class="absolute right-2 sm:right-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❯</button>
+      </div>
+      
+      <div id="lightbox-counter" class="absolute bottom-8 text-bone/50 font-serif tracking-widest text-lg"></div>
+    </div>
+
+    <script>
+      const images = ["https://maxi-lux.pl/wp-content/uploads/2024/08/pogotowie-kanalizacyjne-warszawa.webp","https://maxi-lux.pl/wp-content/uploads/2024/08/wuko-warszawa-srodmiescie-1030x773.webp","https://maxi-lux.pl/wp-content/uploads/2024/08/wuko-srodmiescie-warszawa-1030x627.webp","https://maxi-lux.pl/wp-content/uploads/2024/06/udrazniannie-kanalizacji-wuko.webp","https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-kanalizacyjnych-857x1030.webp","https://maxi-lux.pl/wp-content/uploads/2023/05/mechaniczne-przepychanie-rur-687x1030.webp"];
+      let currentIndex = 0;
+      
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const btnClose = document.getElementById('lightbox-close');
+      const btnPrev = document.getElementById('lightbox-prev');
+      const btnNext = document.getElementById('lightbox-next');
+      const counter = document.getElementById('lightbox-counter');
+      const loader = document.getElementById('lightbox-loader');
+      
+      function showImage(index) {
+        if(index < 0) index = images.length - 1;
+        if(index >= images.length) index = 0;
+        currentIndex = index;
+        
+        lightboxImg.classList.add('opacity-0');
+        loader.style.display = 'flex';
+        
+        lightboxImg.src = images[currentIndex];
+        counter.textContent = (currentIndex + 1) + " / " + images.length;
+      }
+      
+      function openLightbox(index) {
+        showImage(index);
+        lightbox.classList.remove('hidden');
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeLightbox() {
+        lightbox.classList.remove('opacity-100');
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+          lightboxImg.src = '';
+        }, 300);
+        document.body.style.overflow = '';
+      }
+      
+      document.querySelectorAll('.gallery-img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-index'));
+          openLightbox(idx);
+        });
+      });
+      
+      btnClose.addEventListener('click', closeLightbox);
+      btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
+      btnNext.addEventListener('click', () => showImage(currentIndex + 1));
+      
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      });
+      
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || (e.target.parentElement === lightbox && e.target !== lightboxImg && e.target !== btnPrev && e.target !== btnNext)) {
+          closeLightbox();
+        }
+      });
+    </script>
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50
+    });
+  });
+</script>
+
+
+
+<!-- Floating Phone Button -->
+<div class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100]">
+  <div class="relative flex items-center justify-center group">
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue opacity-50 animate-ping" style="animation-duration: 2s;"></span>
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue blur-md opacity-50 animate-pulse"></span>
+    <a href="tel:+48513412313" class="relative inline-flex w-14 h-14 md:w-16 md:h-16 bg-blue hover:bg-blueSoft rounded-full items-center justify-center text-ink shadow-2xl transition-transform hover:scale-110">
+      <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
+  </div>
+</div>
+
+
+<script>
+  // Theme Manager
+  function setTheme(theme) {
+    const isLight = theme === 'light';
+    if (isLight) {
+      document.body.classList.add('light-theme');
+      document.getElementById('theme-light-btn').classList.add('border-2', 'border-blue', 'scale-110');
+      document.getElementById('theme-dark-btn').classList.remove('border-2', 'border-white', 'scale-110');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.getElementById('theme-dark-btn').classList.add('border-2', 'border-white', 'scale-110');
+      document.getElementById('theme-light-btn').classList.remove('border-2', 'border-blue', 'scale-110');
+    }
+    localStorage.setItem('maxilux_theme', theme);
+  }
+
+  // Initialize theme on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('maxilux_theme') || 'dark';
+    setTheme(savedTheme);
+  });
+  // Execute immediately to prevent flash of wrong theme
+  const initialTheme = localStorage.getItem('maxilux_theme');
+  if (initialTheme === 'light') { document.body.classList.add('light-theme'); }
+</script>
+
+</body></html>

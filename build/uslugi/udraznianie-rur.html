@@ -1,0 +1,692 @@
+<!DOCTYPE html><html lang="pl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAXI-LUX — Pogotowie Kanalizacyjne 24/7 | Warszawa i okolice</title>
+<meta name="description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:title" content="Maxi Lux - Usługi kanalizacyjne i hydrauliczne Warszawa i okolice">
+<meta property="og:description" content="Usługi hydrauliczne i kanalizacyjne. Wywóz szamba, przepychanie udrażnianie rur, czyszczenie separatorów, serwis przepompowni, wuko.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: 'var(--color-ink)',
+          coal: 'var(--color-coal)',
+          steel: 'var(--color-steel)',
+          bone: 'var(--color-bone)',
+          mist: 'var(--color-mist)',
+          blue: 'var(--color-blue)',
+          blueSoft: 'var(--color-blue-soft)',
+          rust: 'var(--color-rust)',
+          glass: 'var(--color-glass)',
+          glassBorder: 'var(--color-glass-border)',
+        },
+        fontFamily: {
+          serif: ['"Instrument Serif"', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:var(--color-ink); color:var(--color-bone); font-family:Inter,system-ui,sans-serif; transition: background-color 0.4s ease, color 0.4s ease; }
+
+  :root {
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-steel: #1a2530;
+    --color-bone: #f5f2ec;
+    --color-mist: #e5e0d6;
+    --color-glass: rgba(0, 0, 0, 0.3);
+    --color-glass-border: rgba(255, 255, 255, 0.2);
+    --color-blue: #2563eb;
+    --color-blue-soft: #60a5fa;
+    --color-rust: #c94a15;
+  }
+  .light-theme {
+    --color-ink: #ffffff;
+    --color-coal: #f3f4f6;
+    --color-steel: #e5e7eb;
+    --color-bone: #111827;
+    --color-mist: #374151;
+    --color-glass: rgba(255, 255, 255, 0.6);
+    --color-glass-border: rgba(0, 0, 0, 0.25);
+  }
+
+  .serif { font-family:"Instrument Serif", serif; letter-spacing:-0.01em; }
+  .glow { box-shadow: 0 30px 80px -30px rgba(37,99,235,.55); }
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);background-size:3px 3px;mix-blend-mode:overlay;opacity:.35;}
+  .hero-grad{background:linear-gradient(180deg, rgba(11,15,20,.15) 0%, rgba(11,15,20,.6) 45%, rgba(11,15,20,.95) 100%);}
+  .tape{background:repeating-linear-gradient(45deg,#2563eb 0 18px,#0b0f14 18px 36px);}
+  .chip{border:1px solid rgba(245,242,236,.14); background:rgba(245,242,236,.03);}
+  .card-hover{transition:transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s;}
+  .card-hover:hover{transform:translateY(-4px); border-color:rgba(37,99,235,.6);}
+  .btn-primary{background:#2563eb;color:#0b0f14;font-weight:600;transition:all .3s;}
+  .btn-primary:hover{background:#60a5fa;transform:translateY(-2px);box-shadow:0 20px 40px -10px rgba(37,99,235,.5);}
+  .divider{background:linear-gradient(90deg,transparent,rgba(245,242,236,.2),transparent);height:1px;}
+  .pulse-dot{animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(1.3);}}
+  .marquee{animation:marquee 40s linear infinite;}
+  @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* Lepsza widoczność w jasnym motywie */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.3 !important; /* ciemniejsze paski w tle */
+  }
+  .light-theme footer img[src*="logo.png"] {
+    /* odwracamy kolory loga z białego na czarne z użyciem inwersji i obrotu odcieni, by niebieski został niebieskim! */
+    filter: invert(1) hue-rotate(180deg) brightness(0.8) drop-shadow(0 4px 6px rgba(0,0,0,0.1)) !important;
+  }
+
+
+  /* Hero Text Color Fix in Light Mode */
+  .light-theme .hero-content-wrapper {
+    --color-bone: #f5f2ec;
+    --color-ink: #0b0f14;
+    --color-coal: #111820;
+    --color-mist: #e5e0d6;
+  }
+  
+  /* Strongly visible cards and lines in Light Mode */
+  .light-theme .border-glassBorder {
+    border-color: rgba(0, 0, 0, 0.25) !important;
+  }
+  .light-theme .bg-glass {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  }
+  /* Bolder background stripes */
+  .light-theme .aesthetic-stripes div {
+    opacity: 0.5 !important;
+  }
+  
+
+  /* Fix chip colors in light theme */
+  .light-theme .chip { 
+    border-color: rgba(0,0,0,0.15) !important; 
+    background: rgba(0,0,0,0.03) !important; 
+    color: #111827 !important; 
+  }
+  .light-theme .bg-glass {
+    border: 1px solid rgba(0,0,0,0.15) !important;
+    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.12), 0 0 20px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .hero-mask {
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+  .light-theme header, .light-theme .emergency-bar {
+    --color-ink: #0b0f14 !important;
+    --color-coal: #111820 !important;
+    --color-steel: #1a2530 !important;
+    --color-bone: #f5f2ec !important;
+    --color-mist: #e5e0d6 !important;
+    --color-glass: rgba(0, 0, 0, 0.3) !important;
+    --color-glass-border: rgba(255, 255, 255, 0.2) !important;
+  }
+  /* Force dark mode background on header explicitly just in case */
+  .light-theme header { background-color: rgba(11, 15, 20, 0.95) !important; border-bottom-color: rgba(255,255,255,0.1) !important; }
+  .light-theme header a, .light-theme header button { color: #f5f2ec !important; }
+  .light-theme header .text-bone\/60 { color: rgba(245, 242, 236, 0.6) !important; }
+  .light-theme header .bg-glass { background-color: rgba(0,0,0,0.3) !important; border-color: rgba(255,255,255,0.2) !important; }
+  .light-theme header svg { stroke: #f5f2ec !important; }
+  .light-theme .emergency-bar-text { color: #f5f2ec !important; }
+
+  /* Dropdowns and mobile menus inside header MUST have a solid dark background in light theme so white text is readable */
+  .light-theme header .bg-glass, .light-theme header #mobile-services-menu, .light-theme .header-dropdown-fix {
+    background-color: #111827 !important;
+    border-color: rgba(255,255,255,0.1) !important;
+  }
+
+  /* Make chip backgrounds slightly darker in light theme so text is more visible */
+  .light-theme .chip {
+    background: rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+  }
+
+  /* Ensure the shadow around bg-glass (cards, pages) is extremely noticeable in light mode */
+  .light-theme .bg-glass {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0,0,0,0.15) !important;
+  }
+</style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="antialiased bg-ink text-bone"><div class="fixed inset-0 z-0 pointer-events-none overflow-hidden aesthetic-stripes" aria-hidden="true">
+  <div class="absolute origin-center" style="top: 20%; left: -18%; width: 140vw; height: 4px; transform: rotate(54deg); opacity: 0.14; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 72%; left: 1%; width: 140vw; height: 4px; transform: rotate(-1deg); opacity: 0.08; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 89%; left: -15%; width: 140vw; height: 4px; transform: rotate(-33deg); opacity: 0.16; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 5%; left: 15%; width: 140vw; height: 3px; transform: rotate(-45deg); opacity: 0.1; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 27%; left: -2%; width: 140vw; height: 2px; transform: rotate(55deg); opacity: 0.19; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 75%; left: -13%; width: 140vw; height: 2px; transform: rotate(-43deg); opacity: 0.09; background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 1), transparent);"></div>
+  <div class="absolute origin-center" style="top: 107%; left: 4%; width: 140vw; height: 1px; transform: rotate(-36deg); opacity: 0.14; background-color: rgba(37, 99, 235, 1);"></div>
+  <div class="absolute origin-center" style="top: 1%; left: 14%; width: 140vw; height: 3px; transform: rotate(-6deg); opacity: 0.05; background-color: rgba(37, 99, 235, 1);"></div>
+</div>
+
+<!-- Emergency bar -->
+<div class="tape h-2"></div>
+<div style="background-color: #0b0f14 !important;" class="border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex flex-wrap items-center justify-between gap-2 text-xs uppercase tracking-widest" style="color: #f5f2ec !important;">
+    <div class="flex items-center gap-2" style="color: rgba(245, 242, 236, 0.7) !important;"><span class="pulse-dot w-2 h-2 rounded-full bg-blue"></span> Pogotowie 24/7 · Dojazd nawet w 45 min</div>
+    <a href="tel:+48513412313" class="text-blue font-semibold hover:text-blueSoft">☎ Zadzwoń teraz</a>
+  </div>
+</div>
+
+<!-- Nav -->
+
+<header class="sticky top-0 z-50 bg-ink/95 backdrop-blur-md border-b border-glassBorder shadow-2xl transition-all duration-300">
+  <div class="max-w-[1400px] mx-auto px-4 md:px-6 py-1 flex items-center justify-between">
+    
+      <a href="../index.html" class="flex items-center justify-center overflow-hidden w-40 md:w-56 h-12 md:h-16 relative">
+        <img src="../logo/logo.png" alt="Maxi-Lux Logo" class="absolute w-[200%] h-[200%] object-contain drop-shadow-2xl scale-[1.3] md:scale-[1.5]">
+      </a>
+      
+    
+    
+      <!-- Theme Switcher -->
+      <div class="flex flex-col items-center justify-center mr-6">
+        <div class="flex items-center gap-2 bg-coal/50 backdrop-blur-md rounded-full px-2 py-1 border border-glassBorder mb-1">
+          <button id="theme-dark-btn" onclick="setTheme('dark')" class="w-6 h-6 rounded-full bg-blue hover:scale-110 transition-transform shadow-[0_0_10px_rgba(37,99,235,0.5)] border-2 border-white" aria-label="Dark theme"></button>
+          <button id="theme-light-btn" onclick="setTheme('light')" class="w-6 h-6 rounded-full bg-white hover:scale-110 transition-transform border border-mist shadow-sm" aria-label="Light theme"></button>
+        </div>
+        <span class="text-[9px] uppercase tracking-wider text-mist">Zmień motyw</span>
+      </div>
+<nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-bone/90">
+      
+      <a href="../index.html" class="hover:text-blue transition-colors">Home</a>
+      <a href="../o-nas.html" class="hover:text-blue transition-colors">O nas</a>
+      
+      <!-- Dropdown -->
+      <div class="relative group py-4">
+        <button class="flex items-center gap-1 hover:text-blue transition-colors focus:outline-none">
+          Usługi 
+          <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <!-- The dropdown menu -->
+        <div class="absolute top-full left-0 mt-0 w-80 border border-glassBorder rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 overflow-hidden z-50 bg-glass backdrop-blur-md">
+          <div class="py-2 flex flex-col text-xs">
+            <a href="udraznianie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Przepychanie rur</a>
+            <a href="wuko.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue border-b border-white/5 transition-colors">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-5 py-3 hover:bg-white/5 hover:text-blue transition-colors">Transport ADR</a>
+          </div>
+        </div>
+      </div>
+      
+      <a href="../wywoz-odpadow.html" class="hover:text-blue transition-colors">Wywóz odpadów</a>
+      <a href="../galeria.html" class="hover:text-blue transition-colors">Galeria</a>
+      <a href="../dokumenty.html" class="hover:text-blue transition-colors">Dokumenty</a>
+      <a href="../kontakt.html" class="hover:text-blue transition-colors">Kontakt</a>
+      <a href="../praca.html" class="hover:text-blue transition-colors">Praca</a>
+      
+      <button class="hover:text-blue transition-colors ml-2" aria-label="Szukaj">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </button>
+    
+    </nav>
+    
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-2.5 rounded-full font-semibold text-sm hover:bg-blueSoft transition-colors shadow-lg shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="mobile-menu-btn" onclick="event.preventDefault(); const m = document.getElementById('mobile-menu'); if(m.style.display === 'block') { m.style.display = 'none'; } else { m.style.display = 'block'; }" class="lg:hidden text-bone focus:outline-none p-2 hover:text-blue transition-colors">
+      <svg class="w-8 h-8 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display: none;" class="lg:hidden bg-coal border-t border-glassBorder absolute top-full left-0 right-0 max-h-[85vh] overflow-y-auto shadow-2xl w-full">
+    <div class="px-6 py-4 flex flex-col font-medium text-bone/90">
+      
+      <a href="../index.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Home</a>
+      <a href="../o-nas.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">O nas</a>
+      
+      <!-- Dropdown -->
+      
+          
+        <div class="border-b border-white/5">
+          <button id="mobile-services-btn" onclick="event.preventDefault(); const m = this.nextElementSibling; if(m.classList.contains('hidden')){ m.classList.remove('hidden'); m.style.display='flex'; this.querySelector('svg').style.transform='rotate(180deg)'; } else { m.classList.add('hidden'); m.style.display='none'; this.querySelector('svg').style.transform='rotate(0deg)'; }" class="w-full text-left px-2 py-3 hover:text-blue flex items-center justify-between font-medium">
+            Usługi
+            <svg id="mobile-services-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div id="mobile-services-menu" class="hidden flex-col pl-4 text-sm bg-black/20 pb-2">
+            
+            <a href="udraznianie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Udrażnianie rur kanalizacyjnych</a>
+            <a href="pogotowie-kanalizacyjne.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Pogotowie kanalizacyjne</a>
+            <a href="przepychanie-rur.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Przepychanie rur</a>
+            <a href="wuko.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">WUKO</a>
+            <a href="czyszczenie-separatorow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie separatorów</a>
+            <a href="czyszczenie-piaskownikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie piaskowników</a>
+            <a href="serwis-przepompowni.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Serwis przepompowni ścieków</a>
+            <a href="inspekcja-kamera.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Inspekcja kamerą kanalizacyjną</a>
+            <a href="cisnieniowe-mycie-zbiornikow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Ciśnieniowe mycie zbiorników</a>
+            <a href="mycie-ulic.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Mycie ulic i placów</a>
+            <a href="czyszczenie-przepustow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Czyszczenie przepustów drogowych</a>
+            <a href="naprawy-bezwykopowe.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Naprawy bezwykopowe rur metodą QuickLock</a>
+            <a href="lokalizacja-pokryw.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Lokalizacja pokryw kanalizacyjnych i studni</a>
+            <a href="frezowanie-kanalizacji.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Frezowanie kanalizacji</a>
+            <a href="transport-adr.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Transport ADR</a>
+          
+      
+          </div>
+        </div>
+      
+      
+      <a href="../wywoz-odpadow.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Wywóz odpadów</a>
+      <a href="../galeria.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Galeria</a>
+      <a href="../dokumenty.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Dokumenty</a>
+      <a href="../kontakt.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Kontakt</a>
+      <a href="../praca.html" class="px-2 py-3 border-b border-white/5 hover:text-blue block">Praca</a>
+      
+      
+    
+      <a href="../zlecenie.html" class="bg-blue text-ink px-6 py-4 rounded-full text-center mt-6 font-bold shadow-xl shadow-blue/20">Zlecenie wykonania usługi</a>
+    </div>
+  </div>
+</header>
+  
+
+<!-- Hero -->
+<section class="py-24 relative min-h-[70vh] overflow-hidden z-10">
+
+
+  <div class="max-w-[1000px] mx-auto px-6 relative z-10">
+    <div class="rounded-[2rem] border border-glassBorder p-10 md:p-16 overflow-hidden bg-glass backdrop-blur-md"><div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 border-glassBorder mb-12 pb-12 border-b"><div class="col-span-full mb-2" data-aos="fade-up"><h3 class="serif text-3xl text-blue">Galeria z realizacji</h3></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-zatkanych-rur-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="0"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-warszawa-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="1"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-kanalizacyjnych-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="2"></div><div class="aspect-square overflow-hidden rounded-xl border border-glassBorder hover:border-blue transition-colors shadow-lg" data-aos="fade-up"><img src="https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-495x400.webp" class="w-full h-full object-cover cursor-pointer hover:scale-110 transition-transform duration-500 gallery-img" data-index="3"></div></div>
+      
+
+	<div id="av-layout-grid-1" class="av-layout-grid-container av-feam1-0fb216fe8a83d60d07c2ad5924d0afe4 entry-content-wrapper main_color av-flex-cells  avia-builder-el-0  el_before_av_layout_row  avia-builder-el-first   container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-08bb4c9a09f15b222e2209ae911c6a26 av-gridrow-cell av_one_half no_margin  avia-builder-el-1  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div><div class="flex_cell av-k05683dy-a666fab909cafe5c2990d8b94239259c av-gridrow-cell av_one_half no_margin  avia-builder-el-2  el_after_av_cell_one_half  avia-builder-el-last  content-align-top"><div class="flex_cell_inner">
+<div class="av-special-heading av-9dj5u-217f1b18c6f8683961dd3b4a11eb871b av-special-heading-h1 custom-color-heading blockquote modern-quote modern-centered  avia-builder-el-3  el_before_av_textblock  avia-builder-el-first  av-thin-font av-inherit-size"><h1 class="av-special-heading-tag  serif text-blue mb-4 mt-8 text-4xl md:text-5xl border-b border-glassBorder pb-4" itemprop="headline" data-aos="fade-up"><strong>Udrażnianie rur Warszawa i okolice</strong></h1><div class="av_custom_color av-subheading av-subheading_below"><p class="text-bone/80 mb-4 leading-relaxed">Profesjonalny sprzęt szybko i skutecznie udrożni każdy odpływ</p>
+</div><div class="special-heading-border"><div class="special-heading-inner-border"></div></div></div>
+<section class="av_textblock_section av-k03sgxkz-6e304377ad557a2203c352f1f341dc6f  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up"></h2>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Udrażnianie rur kanalizacji <a href="tel:513412313" class="text-blue hover:text-blueSoft underline transition-colors">513 412 313</a></h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Skuteczne i bezproblemowe <strong>udrażnianie kanalizacji</strong>? Nasza firma oferuje profesjonalne usługi <strong>przepychania rur</strong> i <strong>udrażniania kanalizacji,</strong> które pomogą Ci rozwiązać wszelkie problemy związane z zatkanymi odpływami. Działamy szybko i sprawnie, aby przywrócić prawidłowe funkcjonowanie Twojej <strong>kanalizacji</strong>.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Nasza firma specjalizuje się w <strong>przepychaniu rur</strong> i <strong>udrażnianiu kanalizacji</strong>. Wykorzystujemy nowoczesny sprzęt oraz innowacyjne metody, które pozwalają nam skutecznie usunąć wszelkie zatory, osady czy kamienie, które mogą powodować blokady w Twojej instalacji kanalizacyjnej. Nasi wykwalifikowani technicy posiadają niezbędne umiejętności i doświadczenie, aby szybko zlokalizować problem oraz skutecznie go rozwiązać. Dzięki naszemu profesjonalnemu podejściu i zaawansowanym narzędziom, możemy zagwarantować efektywną i trwałą naprawę.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up"><strong>Zatkana rura odpływowa</strong></h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Udrażnianie rur kanalizacyjnych</strong> jest ważną sprawą w naszym codziennym życiu. Niestety najczęściej zdajemy sobie z tego sprawę dopiero po wystąpieniu awarii. <strong>Zatkana rura odpływowa</strong> zawsze stanowi poważny i kłopotliwy problem. Tego rodzaju awaria z reguły jest nagła i nie ukazuje wcześniejszych symptomów wskazujących czasookres wystąpienia. Nie ma nic bardziej kłopotliwego jak np. zapchany odpływ WC lub niedrożny brodzik w czasie potrzeby wzięcia prysznica. W takich sytuacjach <strong>udrażnianie rur</strong> musi zostać wykonane szybko i skutecznie.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Udrażnianie odpływów</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Do domowych sposobów <strong>udrażniających odpływy</strong> zaliczamy gotowe proszki, granulki, żele, przepychaczki i mieszanki różnych dostępnych związków chemicznych np. ocet i soda. W sklepach budowlanych są jeszcze dostępne podstawowe wersje sprężyn udrażniających, jednakże w rękach niedoświadczonej osoby mogą one wyrządzić nieodwracalne i niepotrzebne szkody.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Zalecamy regularne <strong>przepychanie rur</strong> i <strong>udrażnianie kanalizacji</strong>, aby uniknąć poważniejszych problemów w przyszłości. Oferujemy również usługi profilaktyczne, takie jak przeglądy techniczne, które pomogą w wykryciu ewentualnych usterek na wczesnym etapie.</p>
+</div></section>
+</div></div></div><div id="av-layout-grid-2" class="av-layout-grid-container av-feam1-9-fd66cf203e94937838f77fb9399520d6 entry-content-wrapper main_color av-flex-cells  avia-builder-el-5  el_after_av_layout_row  el_before_av_layout_row  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k056ebyj-8-d4931b428a06944a997a4426a81e2979 av-gridrow-cell av_one_half no_margin  avia-builder-el-6  el_before_av_cell_one_half  avia-builder-el-first  content-align-top avia-full-stretch"><div class="flex_cell_inner">
+</div></div><div class="flex_cell av-k05683dy-7-fcd74a0af2b2c7f1055e3195755c2a0f av-gridrow-cell av_one_half no_margin  avia-builder-el-7  el_after_av_cell_one_half  avia-builder-el-last  content-align-top"><div class="flex_cell_inner">
+<div class="flex_column av-epj76-a43df1601df87f332120eb42db47afae av_one_half  avia-builder-el-8  el_before_av_one_half  avia-builder-el-first  first flex_column_div av-zero-column-padding  "><div class="avia-video av-lasagkss-8dae682f09507613e85ba2d0c9a7edc5 avia-video-16-9 av-no-preview-image avia-video-load-always av-lazyload-immediate av-lazyload-video-embed" itemprop="video" itemtype="https://schema.org/VideoObject" data-original_url="https://www.youtube.com/watch?v=NldkEA6eqXM"><div class="av-click-to-play-overlay"><div class="avia_playpause_icon"></div></div></div></div><div class="flex_column av-ai9ze-5c6f908056b9458fe64c87ab84990c0d av_one_half  avia-builder-el-10  el_after_av_one_half  el_before_av_textblock  flex_column_div av-zero-column-padding  "><div class="avia-video av-lasagkss-3-f371f6a4c1d65261aa5c49395c504765 avia-video-16-9 av-no-preview-image avia-video-load-always av-lazyload-immediate av-lazyload-video-embed" itemprop="video" itemtype="https://schema.org/VideoObject" data-original_url="https://www.youtube.com/watch?v=RaTasI_gKfM&amp;t=28s"><div class="av-click-to-play-overlay"><div class="avia_playpause_icon"></div></div></div></div><section class="av_textblock_section av-k03sgxkz-6-57bb6e03727179a31c77e37cb3aeaa94  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up"></h2>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Sposoby udrażniania rur kanalizacji</h2>
+<ul class="list-disc pl-6 mb-6">
+<li class="text-bone/80 mb-4 leading-relaxed"><strong>metoda mechaniczna</strong> – do zatkanego odpływu wprowadzana jest specjalna, dostosowana do rodzaju zatoru oraz rozmiaru rury sprężyna, zwana niekiedy potocznie żmijką. Rozproszenie zatoru następuje przez szybkie obracanie i w efekcie rozbicie wszystkiego co napotka na swojej drodze. <a href="https://maxi-lux.pl/przepychanie-rur/mechaniczne-udraznianie-rur/" class="text-blue hover:text-blueSoft underline transition-colors">Mechaniczne udrażnianie rur</a> jest niezwykle prostą i skuteczną metodą. Wymaga jednak doświadczonej obsługi i profesjonalnego sprzętu. W innym przypadku możemy doprowadzić do uszkodzenia rur.</li>
+<li class="text-bone/80 mb-4 leading-relaxed"><strong>metoda wodna / ciśnieniowa</strong> – zwana <strong><a href="https://maxi-lux.pl/wuko/" class="text-blue hover:text-blueSoft underline transition-colors">WUKO</a></strong> do udrażnianej rury wprowadzany jest przewód pompujący pod dużym ciśnieniem wodę. Strumień jest tak silny, że bez problemu czyści wszelkiego rodzaju odpływy. <a href="https://maxi-lux.pl/przepychanie-rur/cisnieniowe-czyszczenie-kanalizacji/" class="text-blue hover:text-blueSoft underline transition-colors">Ciśnieniowe czyszczenie kanalizacji</a> jest niezwykle skuteczne, ekologiczne i bezpieczne dla rur.</li>
+<li class="text-bone/80 mb-4 leading-relaxed"><strong>monitoring kanalizacji</strong> – przed przystąpieniem do realizacji zlecenia musimy ustalić dokładne miejsce i rozmiar zatkania. W tym celu nasze <a href="https://maxi-lux.pl/pogotowie-kanalizacyjne/" class="text-blue hover:text-blueSoft underline transition-colors">pogotowie kanalizacyjne</a> wyposażone jest w specjalne kamery inspekcyjne. Dzięki nim specjaliści dobierają i proponują klientowi najskuteczniejszą metodę wykonania usługi.</li>
+</ul>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Domowe sposoby udrażniania rur</h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Domowe sposoby udrażniania rur</strong> są skuteczne tylko do pewnego momentu. Najczęściej problem jest rozwiązywany tylko czasowo. Znacznie skuteczniejszą i prostszą alternatywą jest zamówienie usługi u sprawdzonych fachowców. Za pomocą specjalistycznego sprzętu i swojej wiedzy oczyszczą rury z zatoru w skuteczny i bezpieczny sposób. W nagłych sytuacjach, nasze <a href="https://maxi-lux.pl/pogotowie-kanalizacyjne/" class="text-blue hover:text-blueSoft underline transition-colors">pogotowie kanalizacyjne</a> jest do Państwa dyspozycji na terenie Warszawy i okolic 24 h przez 7 dni w tygodniu.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Udrażnianie rur</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Maxi-Lux jest w pełni przygotowane, aby sprostać Twoim potrzebom. Działamy sprawnie i skutecznie, dostarczając profesjonalne usługi w zakresie <strong>przepychania rur</strong> i <strong>udrażniania kanalizacji</strong>. Niezależnie od tego, czy masz problem z rurami w swoim domu, biurze czy innym obiekcie, możesz polegać na naszej solidnej wiedzy i doświadczeniu.</p>
+<h3 class="serif text-blue mb-4 mt-8 text-2xl">Udrażnianie rur kanalizacyjnych szybko, solidnie Warszawa i okolice – Tylko z Maxi-Lux</h3>
+</div></section>
+</div></div>
+</div><p class="text-bone/80 mb-4 leading-relaxed"></p>
+<div id="av-layout-grid-3" class="av-layout-grid-container av-feam1-5-67ddcf5dcdb314b2b132fe690f17cfd8 entry-content-wrapper main_color av-flex-cells  avia-builder-el-13  el_after_av_layout_row  avia-builder-el-last  grid-row-not-first  container_wrap fullsize">
+<div class="flex_cell av-k05683dy-4-45515b3795e3d40f6af0da9abfe09670 av-gridrow-cell av_one_full no_margin  avia-builder-el-14  avia-builder-el-no-sibling  content-align-top"><div class="flex_cell_inner">
+<section class="av_textblock_section av-k03sgxkz-2-e41c29a31d0c827d271af5fc2663b0e7  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Usługi udrażniania rur – Skuteczne rozwiązania dla Twojej kanalizacji</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Szukasz profesjonalnych usług udrażniania rur, które przywrócą pełny przepływ i działanie Twojego systemu kanalizacyjnego? Maxi-Lux to Twój pewny partner w utrzymaniu prawidłowej pracy odpływów. Dzięki naszemu doświadczeniu, zaawansowanym metodom i sprzętowi, zapewniamy szybkie i trwałe rozwiązania dla wszelkich problemów związanych z niedrożnościami i zatorami.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Skuteczne udrażnianie rur – Dlaczego wybrać nasze usługi?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Doświadczenie i Wiedza</strong>: Nasz zespół specjalistów posiada bogate doświadczenie w dziedzinie udrażniania rur. Znamy różnorodne rodzaje problemów i wiemy, jak je skutecznie rozwiązać.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Zaawansowany Sprzęt</strong>: Dysponujemy nowoczesnym sprzętem i narzędziami, które pozwalają nam precyzyjnie zlokalizować przyczyny problemów i skutecznie je usunąć.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Różnorodne Metody</strong>: Stawiamy na różnorodność metod udrażniania rur. Od mechanicznego przepychania po innowacyjne metody ciśnieniowego czyszczenia czy inspekcji kamerą – dobieramy najlepsze rozwiązanie do konkretnego przypadku.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Szybka Reakcja</strong>: W przypadku awarii lub niedrożności, oferujemy szybką reakcję. Nasza ekipa jest gotowa do interwencji 24/7, aby naprawić problem jak najszybciej.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Profesjonalizm i Skuteczność</strong>: Stawiamy na dokładność i skuteczność. Nasze usługi udrażniania rur są przeprowadzane profesjonalnie, aby zapewnić trwałe rezultaty.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Jakie metody udrażniania rur są najskuteczniejsze i kiedy je stosujemy?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="83" data-end="386">Skuteczne udrażnianie rur wymaga nie tylko odpowiedniego sprzętu, ale przede wszystkim dopasowania metody do rodzaju zatoru i konstrukcji instalacji. W <strong data-start="235" data-end="247">Maxi-Lux</strong> korzystamy z różnych technik, zawsze dobierając je tak, aby osiągnąć maksymalną skuteczność przy minimalnej ingerencji w infrastrukturę.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="388" data-end="768">Najczęściej stosowaną metodą jest <strong data-start="422" data-end="442">czyszczenie WUKO</strong>, czyli udrażnianie rur za pomocą wody pod wysokim ciśnieniem. Ta technologia sprawdza się zarówno przy zatorach tłuszczowych, jak i osadach mineralnych. Idealna do pionów kanalizacyjnych, przyłączy i instalacji zewnętrznych – usuwa nie tylko blokadę, ale też dokładnie oczyszcza wnętrze rur, zapobiegając nawrotom problemu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="770" data-end="1040">W przypadku mniejszych zatorów w zlewach, brodzikach czy umywalkach stosujemy <strong data-start="848" data-end="871">spirale mechaniczne</strong>, które pozwalają na precyzyjne rozbicie zatoru w trudno dostępnych miejscach. Ta metoda jest szybka, skuteczna i nie wymaga rozkuwania ścian czy demontażu instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1042" data-end="1265">Udrażnianie rur może też być wsparte specjalistycznymi środkami chemicznymi, choć stosujemy je ostrożnie – głównie w sytuacjach, gdy inne metody są niewskazane ze względu na stan techniczny rur lub ograniczoną dostępność.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1267" data-end="1578">Dobór odpowiedniej techniki to klucz do sukcesu. Dlatego zawsze przed przystąpieniem do pracy oceniamy sytuację na miejscu i dopasowujemy metodę do rodzaju zatoru oraz typu instalacji. Dzięki temu <strong data-start="1464" data-end="1494">udrażnianie rur z Maxi-Lux</strong> to usługa nie tylko skuteczna, ale i bezpieczna dla Twojego domu, lokalu czy firmy.</p>
+<h2 data-start="1267" data-end="1578" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Udrażnianie rur w domach, mieszkaniach i lokalach usługowych – zakres naszych działań</h2>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="97" data-end="390">Zatory w instalacjach kanalizacyjnych mogą wystąpić praktycznie wszędzie – w domowej kuchni, łazience w mieszkaniu czy toalecie w lokalu gastronomicznym. Właśnie dlatego <strong data-start="267" data-end="286">udrażnianie rur</strong> to usługa, którą w <strong data-start="306" data-end="318">Maxi-Lux</strong> realizujemy kompleksowo, bez względu na typ obiektu i skalę problemu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="392" data-end="660">W domach jednorodzinnych najczęściej interweniujemy przy zatkanych odpływach kuchennych, brodzikach, wannach i rurach deszczowych. Tłuszcze, resztki jedzenia, piasek czy błoto z ogrodu to tylko część zanieczyszczeń, które mogą skutecznie zablokować przepływ ścieków.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="662" data-end="926">W mieszkaniach w blokach i kamienicach zajmujemy się zarówno drobnymi awariami w łazienkach, jak i poważniejszymi problemami z pionami kanalizacyjnymi. Działamy z pełną precyzją – tak, aby nie zakłócać funkcjonowania sąsiadów i nie uszkodzić wspólnej instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="928" data-end="1200">W lokalach usługowych i firmach wykonujemy <strong data-start="971" data-end="990">udrażnianie rur</strong> nie tylko interwencyjnie, ale również profilaktycznie – szczególnie w gastronomii, salonach fryzjerskich, zakładach przemysłowych czy biurach, gdzie intensywne użytkowanie instalacji zwiększa ryzyko zatorów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1202" data-end="1447">Bez względu na to, czy problem dotyczy prywatnego mieszkania, domu czy lokalu użytkowego – możesz liczyć na naszą szybką reakcję, profesjonalne podejście i skuteczne rozwiązanie. <strong data-start="1381" data-end="1447" data-is-last-node="">Udrażnianie rur to nasza specjalność – niezależnie od miejsca.</strong></p>
+</div></section>
+
+<section class="av_textblock_section av-k03sgxkz-1-cabc9c1c7d0b4b939a64b2176c6224f8  relative z-10" itemscope="itemscope" itemtype="https://schema.org/CreativeWork"><div class="avia_textblock av_inherit_color" itemprop="text"><h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Dlaczego nie warto odkładać udrażniania rur na później?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="67" data-end="390">Z pozoru niewielki problem – wolno spływająca woda czy delikatne bulgotanie w odpływie – może w ciągu kilku dni przerodzić się w poważną awarię. <strong data-start="212" data-end="242">Odkładanie udrażniania rur</strong> to ryzykowna decyzja, która często kończy się zalaniem pomieszczeń, kosztowną naprawą instalacji lub przestojem w działalności lokalu usługowego.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="392" data-end="720">Zatory nie znikają same – przeciwnie, z czasem narastają. Gromadzą się tłuszcze, osady, resztki jedzenia, włosy czy piasek, które tworzą coraz twardszy korek w rurze. Im dłużej zwlekasz z interwencją, tym większe ryzyko, że tradycyjne metody przestaną być skuteczne, a naprawa będzie wymagała większej ingerencji w instalację.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="722" data-end="921">Często do zatorów dochodzi w najmniej oczekiwanym momencie – wieczorem, w święto, podczas wizyty gości czy w godzinach szczytu w lokalu. Szybka reakcja pozwala uniknąć stresu i dodatkowych kosztów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="923" data-end="1189">W <strong data-start="925" data-end="937">Maxi-Lux</strong> oferujemy błyskawiczne i skuteczne <strong data-start="973" data-end="992">udrażnianie rur</strong> – reagujemy od razu, diagnozujemy problem na miejscu i natychmiast przystępujemy do działania. Dzięki temu nie tylko usuwamy zator, ale również chronimy instalację przed powtórzeniem się awarii.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1191" data-end="1359">Nie warto czekać, aż woda przestanie spływać całkowicie. <strong data-start="1248" data-end="1359" data-is-last-node="">Zadzwoń do nas, gdy tylko zauważysz pierwsze objawy – to najlepszy moment, by uniknąć prawdziwego problemu.</strong></p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Nasze usługi udrażniania rur</h2>
+<ul class="list-disc pl-6 mb-6">
+<li class="text-bone/80 mb-4 leading-relaxed">Mechaniczne udrażnianie rur</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Ciśnieniowe czyszczenie WUKO</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Udrażnianie rur metodą hydrodynamiczną</li>
+<li class="text-bone/80 mb-4 leading-relaxed">Inspekcja kanalizacji kamerą</li>
+</ul>
+<p class="text-bone/80 mb-4 leading-relaxed">Jeśli Twoja kanalizacja ma problemy z niedrożnościami czy zatorami, skontaktuj się z nami. Maxi-Lux to firma, która dostarczy Ci skuteczne i profesjonalne <strong>udrażnianie rur</strong>. Dzięki nam, Twój system kanalizacyjny wróci do pełnej sprawności, a Ty będziesz mógł cieszyć się komfortem i bezpieczeństwem swojego otoczenia.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Udrażnianie rur – Nasze kwalifikacje</h2>
+<p class="text-bone/80 mb-4 leading-relaxed">Dzięki naszemu zaangażowaniu i skupieniu na klientach, zdobyliśmy uznanie w dziedzinie usług udrażniania rur. Nasze zadowolone klientki i klienci doceniają nas za:</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Skuteczność</strong>: Nasze usługi są nie tylko krótkoterminowym rozwiązaniem, ale również długoterminowym zapewnieniem sprawności Twojej kanalizacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Pewność i Profesjonalizm</strong>: Stawiamy na rzetelność, terminowość i profesjonalizm. Możesz być pewien, że problem zostanie skutecznie zdiagnozowany i naprawiony.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Dostosowanie do Klienta</strong>: Każdy przypadek udrażniania rur jest inny. Nasz zespół dostosowuje podejście do Twoich indywidualnych potrzeb, aby zapewnić najlepsze rezultaty.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Transparentność</strong>: Jesteśmy zawsze gotowi odpowiedzieć na Twoje pytania i wyjaśnić proces udrażniania rur. Nasza transparentność pozwala Ci na pełne zrozumienie wykonywanych prac.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Jeśli masz problem z niedrożnościami rur, zatrzymanym odpływem czy innymi kłopotami z kanalizacją, skontaktuj się z nami. Maxi-Lux to Twoje źródło skutecznych us��ug udrażniania rur. Nasza załoga wykwalifikowanych techników jest gotowa do działania i przywrócenia prawidłowej pracy Twojej kanalizacji. Z nami unikniesz awarii i zagwarantujesz sobie spokój i komfort w codziennym użytkowaniu systemu kanalizacyjnego.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Dlaczego udrażnianie rur z Maxi-Lux to najlepszy wybór</h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Szeroka Wiedza Branżowa</strong>: Nasz zespół składa się z doświadczonych ekspertów z obszaru kanalizacji. Rozumiemy różnorodne problemy, które mogą występować w systemach odpływowych i potrafimy dobrać odpowiednie metody ich rozwiązania.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Zaawansowany Sprzęt</strong>: Inwestujemy w nowoczesny sprzęt i technologie, które umożliwiają nam przeprowadzanie udrażniania rur na najwyższym poziomie. Dzięki temu możemy szybko i precyzyjnie usuwać zatory oraz przywracać pełny przepływ.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Indywidualne Podejście</strong>: Każdy przypadek udrażniania rur jest inny. Nasz zespół dokładnie analizuje sytuację i dobiera najlepszą metodę, uwzględniając specyfikę problemu oraz oczekiwania klienta.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Skuteczność i Trwałość</strong>: Naszym priorytetem jest skuteczność. Nie tylko usuwamy obecne problemy, ale również dbamy o to, aby zapobiec ich powrotowi w przyszłości.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Transparentność i Współpraca</strong>: W trakcie procesu udrażniania rur informujemy Cię o każdym kroku. Dzięki temu masz pełną kontrolę nad sytuacją, a nasza współpraca jest oparta na wzajemnym zaufaniu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Szybka Reakcja</strong>: Rozumiemy, że awarie kanalizacyjne mogą się zdarzyć w najmniej oczekiwanym momencie. Dlatego oferujemy szybką reakcję i gotowość do interwencji w każdym momencie.</p>
+<p class="text-bone/80 mb-4 leading-relaxed">Jeśli potrzebujesz usług udrażniania rur, Maxi-Lux to firma, która dostarczy Ci skuteczne, profesjonalne i kompleksowe rozwiązania. Dzięki naszej wiedzy, doświadczeniu i zaawansowanemu sprzętowi, Twój system kanalizacyjny wróci do pełnej sprawności, a Ty będziesz mógł cieszyć się spokojem i bezpieczeństwem w codziennym użytkowaniu. Skontaktuj się z nami już dziś, aby uzyskać więcej informacji lub umówić się na wizytę.</p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Jak rozpoznać zator, zanim instalacja całkowicie się zatka?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="71" data-end="375">Większość awarii kanalizacyjnych nie pojawia się nagle – rury zwykle „ostrzegają” nas wcześniej, dając subtelne, ale czytelne sygnały, że wewnątrz instalacji coś zaczyna się dziać. Wczesne rozpoznanie problemu to szansa na szybką i tańszą interwencję, zanim dojdzie do całkowitego zablokowania odpływu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="377" data-end="638">Pierwszym objawem zbliżającego się zatoru jest <strong data-start="424" data-end="454">spowolnione spływanie wody</strong>. Jeśli zauważysz, że woda w zlewie, wannie lub brodziku zaczyna się gromadzić i odpływa wolniej niż zwykle, to znak, że wewnątrz rury tworzy się warstwa tłuszczu, włosów lub osadów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="640" data-end="871">Kolejny sygnał to <strong data-start="658" data-end="672">bulgotanie</strong> lub dźwięki zasysania powietrza dochodzące z odpływu, zwłaszcza po spuszczeniu wody w toalecie lub umywalce. To efekt zakłóconego przepływu ścieków, który często poprzedza całkowite zatkanie rury.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="873" data-end="1094">Niepokojącym objawem może być także <strong data-start="909" data-end="950">zapach wydobywający się z kanalizacji</strong> – kwaśny, zgniły lub podobny do kanalizacyjnych gazów. Wskazuje on na zalegające resztki organiczne i brak odpowiedniej cyrkulacji powietrza.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1096" data-end="1316">Jeśli zauważysz te symptomy, nie warto czekać na pogorszenie sytuacji. W takiej chwili najlepiej zlecić <strong data-start="1200" data-end="1233">profesjonalne udrażnianie rur</strong>, zanim dojdzie do pełnego zatoru, cofnięcia się ścieków czy zalania pomieszczeń.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1318" data-end="1527">W firmie <strong data-start="1327" data-end="1339">Maxi-Lux</strong> pomagamy szybko i skutecznie – niezależnie od tego, czy zator dopiero się tworzy, czy już całkowicie zablokował odpływ. Reaguj na pierwsze objawy, a unikniesz poważniejszych konsekwencji.</p>
+<h2 data-start="1318" data-end="1527" class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Co dzieje się z instalacją, gdy nie udrażniasz rur regularnie?</h2>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="74" data-end="446">Brak regularnego udrażniania rur to jeden z najczęstszych powodów poważnych awarii kanalizacyjnych. Choć instalacja działa pozornie bez zarzutu, wewnątrz rur mogą stopniowo narastać osady, które z czasem zamieniają się w twarde, nieprzepuszczalne blokady. Im dłużej zwlekasz z czyszczeniem, tym większe ryzyko nie tylko zatoru, ale również trwałych uszkodzeń instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="448" data-end="705">Zalegający w rurach <strong data-start="468" data-end="522">tłuszcz, włosy, mydło, kamień czy resztki jedzenia</strong> tworzą warstwę, która z każdym tygodniem staje się grubsza i twardsza. Początkowo powoduje jedynie spowolnienie odpływu, ale z czasem może doprowadzić do całkowitego zatkania rury.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="707" data-end="1075">Co gorsza, osady te sprzyjają rozwojowi <strong data-start="747" data-end="768">bakterii i pleśni</strong>, które nie tylko wydzielają nieprzyjemny zapach, ale również mogą wpływać negatywnie na higienę w domu czy lokalu. Długotrwałe zastoje ścieków powodują także <strong data-start="927" data-end="942">korozję rur</strong>, szczególnie w starszych instalacjach żeliwnych, co może skutkować przeciekami i koniecznością wymiany całych odcinków instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1077" data-end="1315">Zaniedbanie regularnego udrażniania to również większe ryzyko cofania się ścieków – szczególnie podczas intensywnych opadów lub zwiększonego obciążenia kanalizacji. W efekcie możesz zostać zaskoczony nagłym zalaniem łazienki lub kuchni.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1317" data-end="1567">Dlatego w <strong data-start="1327" data-end="1339">Maxi-Lux</strong> zachęcamy do działania zanim pojawi się problem. Regularne <strong data-start="1399" data-end="1433">profilaktyczne udrażnianie rur</strong> to prosty sposób na przedłużenie żywotności instalacji, uniknięcie kosztownych napraw i zachowanie komfortu użytkowania każdego dnia.</p>
+<h3 data-start="1317" data-end="1567" class="serif text-blue mb-4 mt-8 text-2xl">Czy można udrażniać rury samodzielnie? Rzeczy, które warto (i nie warto) robić</h3>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="90" data-end="379">Wielu właścicieli domów i mieszkań, zauważając pierwsze objawy zatoru, sięga po domowe sposoby na udrażnianie rur. I rzeczywiście – w niektórych przypadkach mogą one zadziałać. Jednak trzeba wiedzieć, <strong data-start="291" data-end="378">kiedy można działać samodzielnie, a kiedy lepiej nie ryzykować pogorszenia sytuacji</strong>.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="381" data-end="752">Do bezpiecznych metod należą:<br data-start="410" data-end="413"><strong data-start="413" data-end="452">gorąca woda z dodatkiem sody i octu</strong>, która może pomóc w rozpuszczeniu niewielkich osadów tłuszczu w kuchennym zlewie, czy użycie klasycznego <strong data-start="558" data-end="583">gumowego przepychacza</strong> do odpływów w łazience. To dobre rozwiązania na drobne spowolnienia odpływu – szczególnie wtedy, gdy są stosowane regularnie, zanim dojdzie do poważniejszych problemów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="754" data-end="1058">Warto jednak uważać na środki chemiczne z marketów. Choć obiecują szybkie rezultaty, mogą być <strong data-start="848" data-end="876">agresywne dla instalacji</strong>, zwłaszcza starszych rur wykonanych z PCV lub żeliwa. Często rozpuszczają jedynie powierzchniowe warstwy zatoru, zostawiając większy problem nietknięty i powodując jego twardnienie.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1060" data-end="1310">Zdecydowanie nie zaleca się używania tzw. „haków”, drutów czy domowych narzędzi do mechanicznego rozbijania zatorów – można w ten sposób <strong data-start="1197" data-end="1236">uszkodzić rurę, uszczelki lub syfon</strong>, co skończy się wyciekiem lub koniecznością wymiany fragmentu instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1312" data-end="1640">Jeśli problem się powtarza, odpływ całkowicie się zablokował lub z rur wydobywa się nieprzyjemny zapach – to sygnał, że czas na profesjonalną interwencję. <strong data-start="1467" data-end="1541">W Maxi-Lux wykonujemy udrażnianie rur szybko, skutecznie i bezpiecznie</strong>, korzystając z technologii WUKO lub spiral mechanicznych, bez ryzyka uszkodzeń i zbędnych kosztów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1642" data-end="1826"><strong data-start="1642" data-end="1709">Domowe metody mogą pomóc, ale nie zastąpią fachowego działania.</strong> Jeśli masz wątpliwości – lepiej skonsultować się ze specjalistą, zanim z drobnego problemu zrobi się poważna awaria.</p>
+<h3 data-start="1642" data-end="1826" class="serif text-blue mb-4 mt-8 text-2xl">Czym różni się udrażnianie rur w budynkach nowych i starszych?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="74" data-end="419">Instalacje kanalizacyjne różnią się nie tylko wiekiem, ale i materiałami, konstrukcją oraz podatnością na uszkodzenia. Dlatego <strong data-start="201" data-end="239">udrażnianie rur w nowych budynkach</strong> wymaga zupełnie innego podejścia niż w starszych obiektach. W <strong data-start="302" data-end="314">Maxi-Lux</strong> zawsze dopasowujemy metodę do konkretnej instalacji – tak, aby była skuteczna i całkowicie bezpieczna.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="421" data-end="811">W nowym budownictwie rury wykonane są zazwyczaj z tworzyw sztucznych – najczęściej PCV. Są gładkie wewnątrz, co ogranicza przywieranie zanieczyszczeń, ale nie eliminuje ryzyka zatorów. W takich przypadkach najczęściej stosujemy <strong data-start="649" data-end="664">metodę WUKO</strong>, czyli udrażnianie rur wodą pod wysokim ciśnieniem. Dzięki niej możemy szybko oczyścić instalację, nie narażając jej na mechaniczne uszkodzenia.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="813" data-end="1271">Starsze budynki – zwłaszcza te sprzed kilkudziesięciu lat – często mają instalacje wykonane z żeliwa lub rur kamionkowych. Z biegiem czasu ich wnętrze pokrywa się rdzą, kamieniem i osadami, które mocno ograniczają przepływ. W takich przypadkach kluczowa jest ostrożność – zbyt agresywna interwencja może uszkodzić rurę. Dlatego stosujemy <strong data-start="1151" data-end="1223">spirale mechaniczne lub specjalne dysze WUKO o regulowanym ciśnieniu</strong>, dopasowane do stanu technicznego instalacji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1273" data-end="1578">W starszych budynkach częściej też pojawiają się „ukryte” problemy – np. nieszczelności, nieprawidłowe spadki rur czy załamania. Dlatego, zanim przystąpimy do działania, wykonujemy w razie potrzeby <strong data-start="1471" data-end="1491">inspekcję kamerą</strong>, która pozwala ocenić, gdzie dokładnie znajduje się zator i jak najlepiej go usunąć.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1580" data-end="1776">Bez względu na wiek budynku – skuteczne <strong data-start="1620" data-end="1639">udrażnianie rur</strong> to zawsze kwestia właściwej diagnozy i odpowiednio dobranej metody. A w tym możesz w pełni zaufać doświadczeniu specjalistów z Maxi-Lux.</p>
+<h3 data-start="1580" data-end="1776" class="serif text-blue mb-4 mt-8 text-2xl">Dlaczego warto połączyć udrażnianie rur z inspekcją kamerą?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="71" data-end="429">W wielu przypadkach zator w rurze to tylko objaw większego problemu – źle położonego przyłącza, pęknięcia, przemieszczenia fragmentu instalacji lub narastającego osadu w trudno dostępnym miejscu. Dlatego coraz więcej klientów decyduje się na <strong data-start="313" data-end="362">połączenie udrażniania rur z inspekcją kamerą</strong>, aby nie tylko usunąć skutki, ale też poznać przyczynę problemu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="431" data-end="808">Kamera inspekcyjna wprowadzana do wnętrza rury pozwala dokładnie zobaczyć, co się dzieje w środku. Dzięki temu możemy precyzyjnie zlokalizować miejsce zatoru, ocenić stan techniczny instalacji i wybrać najlepszą metodę działania. To szczególnie ważne w przypadku powracających problemów, nietypowych objawów czy starszych instalacji, w których nie wiadomo, w jakim są stanie.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="810" data-end="1138">Inspekcja pozwala też uniknąć niepotrzebnego rozkuwania podłóg czy ścian – obraz z kamery pokazuje, gdzie dokładnie trzeba działać. Po zakończeniu usługi klient otrzymuje dokumentację z nagraniem i opisem ewentualnych nieprawidłowości, co może być pomocne np. w rozmowach z administracją, ubezpieczycielem lub ekipą remontową.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1140" data-end="1353">W <strong data-start="1142" data-end="1154">Maxi-Lux</strong> oferujemy usługę inspekcji kamerą jako uzupełnienie profesjonalnego udrażniania rur. To rozwiązanie, które daje pewność, że problem został nie tylko usunięty, ale również prawidłowo zdiagnozowany.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1355" data-end="1516"><strong data-start="1355" data-end="1388">Lepiej wiedzieć niż zgadywać.</strong> Dzięki kamerze inspekcyjnej zyskujesz kontrolę nad stanem swojej kanalizacji i unikasz kosztownych niespodzianek w przyszłości.</p>
+<h3 data-start="1355" data-end="1516" class="serif text-blue mb-4 mt-8 text-2xl">Zatkana kanalizacja a odpowiedzialność administracji lub najemcy – kto powinien reagować?</h3>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="101" data-end="368">Wielu mieszkańców bloków i kamienic zastanawia się, kto odpowiada za zator w rurach: właściciel mieszkania, najemca, a może administracja budynku? To ważne pytanie, bo od tego zależy nie tylko to, kto powinien wezwać fachowca, ale też kto ponosi koszty interwencji.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="370" data-end="741">Zasadniczo przyjmuje się, że <strong data-start="399" data-end="486">za instalację do tzw. pionu kanalizacyjnego odpowiada właściciel lokalu lub najemca</strong>, natomiast za pion i główne przewody odpływowe – <strong data-start="536" data-end="580">administracja lub zarządca nieruchomości</strong>. Oznacza to, że jeśli zator występuje np. w syfonie zlewu, rurze doprowadzającej wodę z wanny czy toalety, problem spoczywa po stronie użytkownika mieszkania.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="743" data-end="1037">Jeśli natomiast zator występuje głębiej – w pionie kanalizacyjnym lub przewodzie zbiorczym – interweniować powinna administracja, która odpowiada za stan wspólnych instalacji. W takich przypadkach warto niezwłocznie zgłosić awarię, aby uniknąć zalania sąsiednich mieszkań czy większych strat.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1039" data-end="1233">W przypadku najmu mieszkania wiele zależy od zapisów w umowie – zazwyczaj bieżące utrzymanie instalacji (w tym drobne zatory) leży po stronie najemcy, a większe naprawy po stronie właściciela.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1235" data-end="1492">W <strong data-start="1237" data-end="1249">Maxi-Lux</strong> pomagamy zarówno klientom indywidualnym, jak i wspólnotom mieszkaniowym czy firmom zarządzającym nieruchomościami. Wiemy, gdzie kończy się odpowiedzialność użytkownika, a zaczyna zarządcy – i potrafimy szybko zidentyfikować źródło problemu.</p>
+<p class="text-bone/80 mb-4 leading-relaxed" data-start="1494" data-end="1623"><strong data-start="1494" data-end="1623" data-is-last-node="">Nie wiesz, kto powinien działać? Skontaktuj się z nami – podpowiemy, zdiagnozujemy i udrożnimy rury bez zbędnych formalności.</strong></p>
+<h2 class="serif text-blue mb-4 mt-8 text-3xl" data-aos="fade-up">Maxi-Lux udrażnianie rur</h2>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Warszawa:&nbsp;</strong>Bemowo, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-bialoleka/" class="text-blue hover:text-blueSoft underline transition-colors">Białołęka</a>, Bielany, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-mokotow/" class="text-blue hover:text-blueSoft underline transition-colors">Mokotów</a>, Ochota, Praga-Południe, Praga-Północ, Rembertów, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-srodmiescie/" class="text-blue hover:text-blueSoft underline transition-colors">Śródmieście</a>, Targówek, Ursus, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-ursynow/" class="text-blue hover:text-blueSoft underline transition-colors">Ursynów</a>, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-wawer/" class="text-blue hover:text-blueSoft underline transition-colors">Wawer</a>,&nbsp;Wesoła, <a href="https://maxi-lux.pl/udraznianie-rur/warszawa-wilanow/" class="text-blue hover:text-blueSoft underline transition-colors">Wilanów</a>, Włochy, Wola i Żoliborz.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Powiaty:</strong></p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Wołomiński:&nbsp;</b>Dąbrówka, Klembów, <a href="https://maxi-lux.pl/udraznianie-rur/kobylka/" class="text-blue hover:text-blueSoft underline transition-colors">Kobyłka</a>, <a href="https://maxi-lux.pl/udraznianie-rur/marki/" class="text-blue hover:text-blueSoft underline transition-colors">Marki</a>, Poświętne, <a href="https://maxi-lux.pl/udraznianie-rur/radzymin/" class="text-blue hover:text-blueSoft underline transition-colors">Radzymin</a>, Tłuszcz,&nbsp;<a href="https://maxi-lux.pl/udraznianie-rur/wolomin/" class="text-blue hover:text-blueSoft underline transition-colors">Wołomin</a>, Ząbki i Zielonka.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Warszawski zachodni:&nbsp;</b>Błonie, <a href="https://maxi-lux.pl/udraznianie-rur/lomianki/" class="text-blue hover:text-blueSoft underline transition-colors">Łomianki</a>, Ożarów Mazowiecki, <a href="https://maxi-lux.pl/udraznianie-rur/izabelin/" class="text-blue hover:text-blueSoft underline transition-colors">Izabelin</a>, Kampinos, Leszno i Stare Babice.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Piaseczyński:&nbsp;</b>Góra Kalwaria,&nbsp;<a href="https://maxi-lux.pl/udraznianie-rur/konstancin-jeziorna/" class="text-blue hover:text-blueSoft underline transition-colors">Konstancin Jeziorna</a>, <a href="https://maxi-lux.pl/udraznianie-rur/piaseczno/" class="text-blue hover:text-blueSoft underline transition-colors">Piaseczno</a>, Tarczyn, Lesznowola i Prażmów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Pruszkowski:&nbsp;</b><a href="https://maxi-lux.pl/udraznianie-rur/piastow/" class="text-blue hover:text-blueSoft underline transition-colors">Piastów</a>, <a href="https://maxi-lux.pl/udraznianie-rur/pruszkow/" class="text-blue hover:text-blueSoft underline transition-colors">Pruszków</a>, Brwinów, Michałowice, <a href="https://maxi-lux.pl/udraznianie-rur/nadarzyn/" class="text-blue hover:text-blueSoft underline transition-colors">Nadarzyn</a> i <a href="https://maxi-lux.pl/udraznianie-rur/raszyn/" class="text-blue hover:text-blueSoft underline transition-colors">Raszyn</a>.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Miński:&nbsp;</b><a href="https://maxi-lux.pl/udraznianie-rur/minsk-mazowiecki/" class="text-blue hover:text-blueSoft underline transition-colors">Mińsk Mazowiecki</a>, <a href="https://maxi-lux.pl/udraznianie-rur/sulejowek/" class="text-blue hover:text-blueSoft underline transition-colors">Sulejówek</a>, Halinów, Kałuszyn, Mrozy, Cegłów, Dębe Wielkie, Dobre, Jakubów, Latowicz, Siennica i Stanisławów.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Nowodworski:&nbsp;</b>Nowy Dwór Mazowiecki, Nasielsk, Zakroczym, Czosnów, Leoncin i Pomiechówek.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Otwocki:&nbsp;</b>Celestynów,&nbsp;Kołbiel, Osieck, Sobienie-Jeziory, Wiązowna,&nbsp;Karczew,&nbsp;<a href="https://maxi-lux.pl/udraznianie-rur/jozefow/" class="text-blue hover:text-blueSoft underline transition-colors">Józefów</a>&nbsp;i&nbsp;Otwock.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><b>Legionowski:&nbsp;</b><a href="https://maxi-lux.pl/udraznianie-rur/legionowo/" class="text-blue hover:text-blueSoft underline transition-colors">Legionowo</a>, Nieporęt, Serock, Jabłonna, Chotomów i Wieliszew.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Siedlecki:</strong>&nbsp;Domanice, Kotuń, Mokobrody, Paprotnia, Przesmyki,&nbsp;Siedlce, Skórzec, Suchożebry, Wiśniew, Wodynie, Zbuczyn i Mordy.</p>
+<p class="text-bone/80 mb-4 leading-relaxed"><strong>Garwoliński:</strong>&nbsp;Garwolin, Łaskarzew, Pilawa, Żelechów, Borowie, Górzno, Maciejowice, Miastków Kościelny, Parysów, Sobolew, Trojanów i Wilga.</p>
+</div></section>
+</div></div>
+</div>
+<div data-wpr-lazyrender="1"><div>		</div><!--end builder template--></div><!-- close default .container_wrap element -->
+
+			<!-- end main -->
+		
+    </div>
+  </div>
+</section><!-- Footer -->
+<footer class="bg-ink border-t border-glassBorder pt-12 pb-6 relative z-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10 mb-8">
+    <!-- Adres -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Adres</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p class="font-bold text-bone">MAXI-LUX Krzysztof Jarosiński</p>
+        <p>ul. Wawrzyniecka 78,</p>
+        <p>05-340 Kołbiel k/Warszawy</p>
+        <p class="mt-2">NIP: 521 185 58 30</p>
+        <p>BDO: 000557924</p>
+      </div>
+    </div>
+    
+    <!-- Kontakt -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Kontakt</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p>Telefon: <a href="tel:+48513412313" class="hover:text-blue transition border-b border-blue/30">513 412 313</a></p>
+        <p>E-mail: <a href="mailto:biuro@maxi-lux.pl" class="hover:text-blue transition border-b border-blue/30">biuro@maxi-lux.pl</a></p>
+      </div>
+    </div>
+
+    <!-- Usługi -->
+    <div class="flex flex-col items-center text-center">
+      <h3 class="font-bold text-bone mb-2">Usługi</h3>
+      <div class="w-24 h-[1px] bg-glassBorder relative mb-4">
+        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink flex items-center justify-center text-blue">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg>
+        </div>
+      </div>
+      <div class="text-sm text-bone/80 space-y-1">
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Udrażnianie rur kanalizacyjnych</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Pogotowie kanalizacyjne</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Przepychanie rur</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">WUKO</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Czyszczenie separatorów</a></p>
+        <p><a href="#uslugi" class="hover:text-blue transition border-b border-transparent hover:border-blue/30 font-bold text-bone">Transport ADR</a></p>
+      </div>
+    </div>
+
+    
+  </div>
+  
+  <div class="max-w-7xl mx-auto px-6 pt-6 border-t border-glassBorder flex flex-col md:flex-row items-center justify-between text-xs text-bone/50">
+    <p>Copyright 2026 &copy; Maxi-Lux</p>
+    
+    <div class="flex flex-wrap gap-2 mt-4 md:mt-0 justify-center">
+      <a href="../polityka-prywatnosci.html" class="hover:text-blue transition">Polityka prywatności</a> <span class="mx-1">|</span>
+      <a href="../rodo.html" class="hover:text-blue transition">RODO</a> <span class="mx-1">|</span>
+      <a href="../blog.html" class="hover:text-blue transition">BLOG</a> <span class="mx-1">|</span>
+      <a href="kontakt.html" class="hover:text-blue transition">Kontakt</a>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-ink/95 backdrop-blur-md hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300">
+      <button id="lightbox-close" class="absolute top-6 right-6 text-bone/50 hover:text-blue text-5xl leading-none transition-colors">×</button>
+      
+      <div class="relative w-full h-full flex items-center justify-center p-4 sm:p-12">
+        <!-- Prev Button -->
+        <button id="lightbox-prev" class="absolute left-2 sm:left-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❮</button>
+        
+        <!-- Image Container -->
+        <div class="relative max-w-full max-h-full flex items-center justify-center">
+          <div id="lightbox-loader" class="absolute inset-0 flex items-center justify-center">
+            <div class="w-12 h-12 border-4 border-glassBorder border-t-blue rounded-full animate-spin"></div>
+          </div>
+          <img id="lightbox-img" class="max-h-[85vh] max-w-[90vw] object-contain rounded-xl shadow-2xl relative z-10 transition-opacity duration-300 opacity-0" src="" alt="Gallery Image" onload="this.classList.remove('opacity-0'); document.getElementById('lightbox-loader').style.display='none';">
+        </div>
+        
+        <!-- Next Button -->
+        <button id="lightbox-next" class="absolute right-2 sm:right-8 text-bone/30 hover:text-blue text-6xl transition-colors p-4 z-10 drop-shadow-xl">❯</button>
+      </div>
+      
+      <div id="lightbox-counter" class="absolute bottom-8 text-bone/50 font-serif tracking-widest text-lg"></div>
+    </div>
+
+    <script>
+      const images = ["https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-zatkanych-rur-688x1030.webp","https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-warszawa-1027x1030.webp","https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-kanalizacyjnych-857x1030.webp","https://maxi-lux.pl/wp-content/uploads/2023/12/udraznianie-rur-773x1030.webp"];
+      let currentIndex = 0;
+      
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const btnClose = document.getElementById('lightbox-close');
+      const btnPrev = document.getElementById('lightbox-prev');
+      const btnNext = document.getElementById('lightbox-next');
+      const counter = document.getElementById('lightbox-counter');
+      const loader = document.getElementById('lightbox-loader');
+      
+      function showImage(index) {
+        if(index < 0) index = images.length - 1;
+        if(index >= images.length) index = 0;
+        currentIndex = index;
+        
+        lightboxImg.classList.add('opacity-0');
+        loader.style.display = 'flex';
+        
+        lightboxImg.src = images[currentIndex];
+        counter.textContent = (currentIndex + 1) + " / " + images.length;
+      }
+      
+      function openLightbox(index) {
+        showImage(index);
+        lightbox.classList.remove('hidden');
+        setTimeout(() => {
+          lightbox.classList.remove('opacity-0');
+          lightbox.classList.add('opacity-100');
+        }, 10);
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeLightbox() {
+        lightbox.classList.remove('opacity-100');
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => {
+          lightbox.classList.add('hidden');
+          lightboxImg.src = '';
+        }, 300);
+        document.body.style.overflow = '';
+      }
+      
+      document.querySelectorAll('.gallery-img').forEach(img => {
+        img.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.getAttribute('data-index'));
+          openLightbox(idx);
+        });
+      });
+      
+      btnClose.addEventListener('click', closeLightbox);
+      btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
+      btnNext.addEventListener('click', () => showImage(currentIndex + 1));
+      
+      document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+      });
+      
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || (e.target.parentElement === lightbox && e.target !== lightboxImg && e.target !== btnPrev && e.target !== btnNext)) {
+          closeLightbox();
+        }
+      });
+    </script>
+    
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+      btn.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50
+    });
+  });
+</script>
+
+
+
+<!-- Floating Phone Button -->
+<div class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-[100]">
+  <div class="relative flex items-center justify-center group">
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue opacity-50 animate-ping" style="animation-duration: 2s;"></span>
+    <span class="absolute inline-flex h-full w-full rounded-full bg-blue blur-md opacity-50 animate-pulse"></span>
+    <a href="tel:+48513412313" class="relative inline-flex w-14 h-14 md:w-16 md:h-16 bg-blue hover:bg-blueSoft rounded-full items-center justify-center text-ink shadow-2xl transition-transform hover:scale-110">
+      <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+    </a>
+  </div>
+</div>
+
+
+<script>
+  // Theme Manager
+  function setTheme(theme) {
+    const isLight = theme === 'light';
+    if (isLight) {
+      document.body.classList.add('light-theme');
+      document.getElementById('theme-light-btn').classList.add('border-2', 'border-blue', 'scale-110');
+      document.getElementById('theme-dark-btn').classList.remove('border-2', 'border-white', 'scale-110');
+    } else {
+      document.body.classList.remove('light-theme');
+      document.getElementById('theme-dark-btn').classList.add('border-2', 'border-white', 'scale-110');
+      document.getElementById('theme-light-btn').classList.remove('border-2', 'border-blue', 'scale-110');
+    }
+    localStorage.setItem('maxilux_theme', theme);
+  }
+
+  // Initialize theme on load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('maxilux_theme') || 'dark';
+    setTheme(savedTheme);
+  });
+  // Execute immediately to prevent flash of wrong theme
+  const initialTheme = localStorage.getItem('maxilux_theme');
+  if (initialTheme === 'light') { document.body.classList.add('light-theme'); }
+</script>
+
+</body></html>
